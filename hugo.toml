@@ -1,0 +1,16 @@
+baseURL = 'https://gzpcboy.github.io/curiousdad.github.io/'
+languageCode = 'en-us'
+title = 'Curious Dad'
+theme = ''
+
+[params]
+  description = 'Notes on family, technology, learning, and the wonderfully curious work of being a dad.'
+  author = 'Curious Dad'
+
+[permalinks]
+  posts = '/posts/:year/:month/:slug/'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,33 @@
+{{ define "main" }}
+<section class="hero">
+  <p class="eyebrow">A personal journal</p>
+  <h1>Stay curious.<br><em>Be present.</em></h1>
+  <p class="hero-copy">Notes from the joyful, messy, endlessly interesting work of being a dad—and a person who still has questions.</p>
+  <a class="text-link" href="#journal">Read the journal <span aria-hidden="true">→</span></a>
+</section>
+
+<section id="journal" class="journal-section" aria-labelledby="journal-title">
+  <div class="section-heading">
+    <p class="eyebrow">Recent notes</p>
+    <h2 id="journal-title">From the journal</h2>
+  </div>
+  <div class="post-grid">
+    {{ range where .Site.RegularPages "Section" "posts" }}
+      <article class="post-card">
+        <p class="post-date">{{ .Date.Format "Jan 2, 2006" }}</p>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Description | default .Summary | plainify | truncate 145 }}</p>
+        <a class="card-link" href="{{ .RelPermalink }}" aria-label="Read {{ .Title }}">Read note <span aria-hidden="true">↗</span></a>
+      </article>
+    {{ end }}
+  </div>
+</section>
+
+<section class="about-callout">
+  <div>
+    <p class="eyebrow">A work in progress</p>
+    <h2>There’s always more to notice.</h2>
+  </div>
+  <p>This site is a growing collection of thoughts, experiments, and stories from family life. Pull up a chair.</p>
+</section>
+{{ end }}

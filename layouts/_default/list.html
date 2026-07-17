@@ -1,0 +1,18 @@
+{{ define "main" }}
+<header class="page-header">
+  <p class="eyebrow">{{ .Section | title }}</p>
+  <h1>{{ .Title }}</h1>
+  {{ with .Content }}<div class="page-intro">{{ . }}</div>{{ end }}
+</header>
+<div class="post-list">
+  {{ range .Pages }}
+    <article class="post-row">
+      <p class="post-date">{{ .Date.Format "Jan 2, 2006" }}</p>
+      <div>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p>{{ .Description | default .Summary | plainify | truncate 180 }}</p>
+      </div>
+    </article>
+  {{ end }}
+</div>
+{{ end }}
