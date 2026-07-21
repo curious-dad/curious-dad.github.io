@@ -1,33 +1,53 @@
 {{ define "main" }}
-<section class="hero">
-  <p class="eyebrow">A personal journal</p>
-  <h1>Stay curious.<br><em>Be present.</em></h1>
-  <p class="hero-copy">Notes from the joyful, messy, endlessly interesting work of being a dad—and a person who still has questions.</p>
-  <a class="text-link" href="#journal">Read the journal <span aria-hidden="true">→</span></a>
-</section>
-
-<section id="journal" class="journal-section" aria-labelledby="journal-title">
-  <div class="section-heading">
-    <p class="eyebrow">Recent notes</p>
-    <h2 id="journal-title">From the journal</h2>
-  </div>
-  <div class="post-grid">
+<div class="home-layout">
+  <section class="post-feed" aria-labelledby="journal-title">
+    <header class="feed-heading">
+      <p class="eyebrow">Field notes on family, technology, and learning</p>
+      <h1 id="journal-title">Latest posts</h1>
+    </header>
     {{ range where .Site.RegularPages "Section" "posts" }}
+      {{ $post := . }}
       <article class="post-card">
-        <p class="post-date">{{ .Date.Format "Jan 2, 2006" }}</p>
-        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        <p>{{ .Description | default .Summary | plainify | truncate 145 }}</p>
-        <a class="card-link" href="{{ .RelPermalink }}" aria-label="Read {{ .Title }}">Read note <span aria-hidden="true">↗</span></a>
+        {{ with .Params.cover }}
+          <a class="post-cover" href="{{ $post.RelPermalink }}" tabindex="-1" aria-hidden="true">
+            <img src="{{ strings.TrimPrefix "/" . | relURL }}" alt="" loading="lazy">
+          </a>
+        {{ end }}
+        <div class="post-card-body">
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <p class="post-summary">{{ .Description | default .Summary | plainify | truncate 220 }}</p>
+          {{ with .Params.tags }}
+            <ul class="tag-list" aria-label="Tags">
+              {{ range . }}<li><span>#</span>{{ . }}</li>{{ end }}
+            </ul>
+          {{ end }}
+          <div class="post-meta">
+            <span>▣ <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></span>
+            <span>◷ {{ .Params.readingTime | default .ReadingTime }} min read</span>
+          </div>
+        </div>
       </article>
     {{ end }}
-  </div>
-</section>
+  </section>
 
-<section class="about-callout">
-  <div>
-    <p class="eyebrow">A work in progress</p>
-    <h2>There’s always more to notice.</h2>
-  </div>
-  <p>This site is a growing collection of thoughts, experiments, and stories from family life. Pull up a chair.</p>
-</section>
+  <aside class="sidebar" aria-label="Sidebar">
+    <section class="sidebar-card intro-card">
+      <p class="sidebar-kicker">Hello there</p>
+      <h2>Stay curious.<br>Be present.</h2>
+      <p>Notes from the joyful, messy, endlessly interesting work of being a dad—and a person who still has questions.</p>
+      <a href="{{ "about/" | relURL }}">More about this journal →</a>
+    </section>
+    <section class="sidebar-card">
+      <h2 class="sidebar-title"><span>#</span> Topics</h2>
+      <div class="topic-list">
+        {{ range .Site.Taxonomies.tags }}<a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>{{ end }}
+      </div>
+    </section>
+    <section class="sidebar-card subscribe-card">
+      <h2 class="sidebar-title">New notes, quietly delivered</h2>
+      <p>Follow along through the site’s RSS feed.</p>
+      <a class="subscribe-button" href="{{ "index.xml" | relURL }}">Subscribe via RSS</a>
+    </section>
+  </aside>
+</div>
 {{ end }}

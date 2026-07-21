@@ -93,9 +93,22 @@
   .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 100; }
   .lang-switch a { display: inline-block; background: rgba(14,17,23,0.85); border: 1px solid #2a3548; color: #8a9ab5; text-decoration: none; padding: 7px 14px; border-radius: 4px; font-family: sans-serif; font-size: 12px; backdrop-filter: blur(8px); transition: all 0.2s; }
   .lang-switch a:hover { color: #7ab3d4; border-color: #7ab3d4; }
+  .article-site-nav { position: fixed; top: 20px; left: 20px; z-index: 100; display: flex; align-items: center; gap: 10px; font-family: sans-serif; }
+  .article-site-brand { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; background: #087f5b; color: #fff; text-decoration: none; box-shadow: 0 8px 25px rgba(0,0,0,.28); }
+  .article-site-links { display: flex; padding: 2px 6px; border: 1px solid #2a3548; border-radius: 999px; background: rgba(14,17,23,.88); backdrop-filter: blur(8px); }
+  .article-site-links a { padding: 6px 9px; color: #8a9ab5; font-size: 12px; text-decoration: none; }
+  .article-site-links a:hover { color: #7ab3d4; }
+  @media(max-width:600px) { .article-site-links { display: none; } }
 </style>
 </head>
 <body>
+<div class="article-site-nav">
+  <a class="article-site-brand" href="{{ .Site.Home.RelPermalink }}" aria-label="Curious Dad home">✦</a>
+  <nav class="article-site-links" aria-label="Site navigation">
+    <a href="{{ .Site.Home.RelPermalink }}">Posts</a>
+    <a href="{{ "about/" | relURL }}">About</a>
+  </nav>
+</div>
 <div class="lang-switch"><a href="index_zh.html">中文 →</a></div>
 <div class="hero">
 <div class="hero-bg"></div>

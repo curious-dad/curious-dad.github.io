@@ -2,11 +2,20 @@
   <div class="header-inner">
     <a class="brand" href="{{ .Site.Home.RelPermalink }}" aria-label="Curious Dad home">
       <span class="brand-mark">✦</span>
-      <span>Curious Dad</span>
+      <span class="brand-name">Curious Dad</span>
     </a>
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="{{ .Site.Home.RelPermalink }}">Journal</a>
-      <a href="{{ "about/" | relURL }}">About</a>
-    </nav>
+    <div class="header-actions">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a{{ if .IsHome }} class="active"{{ end }} href="{{ .Site.Home.RelPermalink }}">Posts</a>
+        <a{{ if eq .RelPermalink ("about/" | relURL) }} class="active"{{ end }} href="{{ "about/" | relURL }}">About</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="sun" aria-hidden="true">☀</span>
+        <span class="moon" aria-hidden="true">☾</span>
+      </button>
+    </div>
   </div>
 </header>

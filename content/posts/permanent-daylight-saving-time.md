@@ -5,4 +5,6 @@ description: "As permanent daylight saving time returns to Congress, America's s
 tags: ["history", "daylight saving time", "public policy"]
 layout: "dst"
 slug: "permanent-daylight-saving-time"
+cover: "/posts/2026/07/permanent-daylight-saving-time/images/dark_morning_kids.jpg"
+readingTime: 8
 ---
