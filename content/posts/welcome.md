@@ -3,6 +3,7 @@ title: "Welcome to Curious Dad"
 date: 2026-07-16
 description: "Why this blog exists and what I hope to explore here."
 tags: ["hello", "curiosity"]
+draft: true
 ---
 
 ## Start with a question

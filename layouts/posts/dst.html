@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Permanent Daylight Saving Time: America's 1974 Experiment</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Georgia', serif; background: #0e1117; color: #e8e6e0; line-height: 1.9; }
+
+  .hero {
+    position: relative; height: 100vh; min-height: 600px;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden; background: #060810;
+  }
+  .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #060810 0%, #0d1a2e 50%, #060810 100%); }
+  .hero-overlay { position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 30%, #060810 100%); }
+  .hero-content { position: relative; z-index: 2; text-align: center; padding: 0 24px; max-width: 860px; }
+  .hero-tag { display: inline-block; background: #2a6496; color: #fff; font-size: 12px; letter-spacing: 3px; padding: 6px 18px; border-radius: 2px; margin-bottom: 28px; font-family: sans-serif; font-weight: 700; text-transform: uppercase; }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 700; line-height: 1.2; color: #f5f0e8; margin-bottom: 20px; }
+  .hero h1 em { color: #7ab3d4; font-style: normal; }
+  .hero-sub { font-size: 1.05rem; color: #8a9ab5; max-width: 620px; margin: 0 auto 40px; font-family: sans-serif; }
+  .hero-date { font-size: 12px; color: #4a5568; font-family: sans-serif; letter-spacing: 2px; text-transform: uppercase; }
+  .scroll-hint { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); color: #3a4a5e; font-size: 22px; animation: bounce 2s infinite; }
+  @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
+
+  .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 80px 0; border-bottom: 1px solid #1e2535; }
+  section:last-of-type { border-bottom: none; }
+  .section-label { font-family: sans-serif; font-size: 11px; letter-spacing: 4px; color: #7ab3d4; text-transform: uppercase; margin-bottom: 16px; }
+  h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); color: #f0ece4; margin-bottom: 28px; line-height: 1.3; }
+  p { font-size: 1.05rem; color: #c8c4bc; margin-bottom: 20px; }
+  p strong { color: #e8e4dc; }
+  sup a { color: #5a8aae; text-decoration: none; font-size: 0.75em; }
+  sup a:hover { text-decoration: underline; }
+
+  .img-block { margin: 40px 0; }
+  .img-block img { width: 100%; display: block; border-radius: 4px; }
+  .img-caption { font-family: sans-serif; font-size: 12px; color: #4a5568; margin-top: 10px; line-height: 1.6; padding: 0 4px; }
+  .img-caption strong { color: #6a7a8e; }
+  .img-caption a { color: #5a8aae; text-decoration: none; }
+  .img-caption a:hover { text-decoration: underline; }
+
+  .img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0; }
+  @media(max-width:600px){ .img-grid{grid-template-columns:1fr;} }
+
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 40px 0; }
+  @media(max-width:600px){ .stats{grid-template-columns:1fr;} }
+  .stat-card { background: #141b2d; border: 1px solid #1e2a40; border-radius: 6px; padding: 24px 20px; text-align: center; }
+  .stat-num { font-size: 2.4rem; font-weight: 700; color: #7ab3d4; line-height: 1; margin-bottom: 8px; }
+  .stat-label { font-family: sans-serif; font-size: 12px; color: #6a7a8e; line-height: 1.4; }
+
+  .timeline { margin: 40px 0; }
+  .tl-item { display: flex; gap: 20px; margin-bottom: 28px; align-items: flex-start; }
+  .tl-date { font-family: sans-serif; font-size: 12px; color: #7ab3d4; font-weight: 700; white-space: nowrap; min-width: 120px; padding-top: 3px; }
+  .tl-dot { width: 10px; height: 10px; border-radius: 50%; background: #7ab3d4; margin-top: 6px; flex-shrink: 0; }
+  .tl-text { font-size: 0.95rem; color: #b0aaa0; line-height: 1.6; }
+
+  blockquote { border-left: 3px solid #7ab3d4; margin: 36px 0; padding: 20px 28px; background: #111827; border-radius: 0 6px 6px 0; }
+  blockquote p { font-size: 1.05rem; color: #d4cfc7; font-style: italic; margin: 0 0 10px; }
+  blockquote cite { font-family: sans-serif; font-size: 12px; color: #4a5568; font-style: normal; }
+
+  .debate { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 36px 0; }
+  @media(max-width:600px){ .debate{grid-template-columns:1fr;} }
+  .debate-box { padding: 24px; border-radius: 6px; border: 1px solid; }
+  .debate-box.pro { background: #0d1f2d; border-color: #1a3a5a; }
+  .debate-box.con { background: #1a1a0d; border-color: #3a3a1a; }
+  .debate-box h4 { font-family: sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; }
+  .debate-box.pro h4 { color: #5a9abf; }
+  .debate-box.con h4 { color: #9a9a4a; }
+  .debate-box ul { list-style: none; }
+  .debate-box ul li { font-size: 0.9rem; color: #b0aaa0; padding: 5px 0; border-bottom: 1px solid #1e2535; }
+  .debate-box ul li:last-child { border-bottom: none; }
+  .debate-box.pro ul li::before { content: '→  '; color: #5a9abf; }
+  .debate-box.con ul li::before { content: '→  '; color: #9a9a4a; }
+
+  .note-box { background: #141b2d; border: 1px solid #1e2a40; border-radius: 6px; padding: 20px 24px; margin: 28px 0; }
+  .note-box p { font-size: 0.9rem; color: #8a9ab5; margin: 0; font-family: sans-serif; }
+  .note-box strong { color: #7ab3d4; }
+
+  .ending { text-align: center; padding: 100px 24px; background: #060810; }
+  .ending p { font-size: 1.1rem; color: #6a7a8e; max-width: 620px; margin: 0 auto 16px; font-style: italic; }
+  .ending .year { font-size: 5rem; font-weight: 700; color: #1a2535; line-height: 1; margin-bottom: 32px; }
+
+  .sources { background: #0a0f1a; padding: 60px 0; }
+  .sources h3 { font-family: sans-serif; font-size: 13px; letter-spacing: 3px; color: #4a5568; text-transform: uppercase; margin-bottom: 24px; }
+  .sources ol { padding-left: 20px; }
+  .sources li { font-family: sans-serif; font-size: 12px; color: #4a5568; margin-bottom: 10px; line-height: 1.6; }
+  .sources li a { color: #5a8aae; text-decoration: none; }
+  .sources li a:hover { text-decoration: underline; }
+
+  .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 100; }
+  .lang-switch a { display: inline-block; background: rgba(14,17,23,0.85); border: 1px solid #2a3548; color: #8a9ab5; text-decoration: none; padding: 7px 14px; border-radius: 4px; font-family: sans-serif; font-size: 12px; backdrop-filter: blur(8px); transition: all 0.2s; }
+  .lang-switch a:hover { color: #7ab3d4; border-color: #7ab3d4; }
+</style>
+</head>
+<body>
+<div class="lang-switch"><a href="index_zh.html">中文 →</a></div>
+<div class="hero">
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<div class="hero-tag">2026 Context · History</div>
+<h1>Permanent Daylight Saving Time<br/><em>America's 1974 Experiment</em></h1>
+<p class="hero-sub">After years of advocacy, the Sunshine Protection Act has passed the House. As the debate intensifies, history offers a reference point.</p>
+<p class="hero-date">1973 – 1974 · United States</p>
+</div>
+<div class="scroll-hint">↓</div>
+</div>
+<!-- Section 1: Present -->
+<section>
+<div class="container">
+<div class="section-label">2026 — The Present</div>
+<h2>The Bill Passes the House. The Debate Resurfaces.</h2>
+<p>On July 14, 2026, the U.S. House of Representatives passed the Sunshine Protection Act by a vote of 308 to 117, advancing permanent daylight saving time further than it has gone in years. The bill represents a renewed push after the Senate passed a similar measure unanimously in 2022, only for it to stall in the House.</p>
+<p>The bill now heads to the Senate. Supporters argue that eliminating the twice-yearly clock change would reduce sleep disruption, lower traffic accident rates, and stimulate evening economic activity. Critics point out that permanent daylight saving time would mean longer periods of winter darkness in the morning, with particular impact on northern states and early commuters.</p>
+<p>The United States has been through this debate before — fifty years ago. That experiment lasted less than ten months.</p>
+</div>
+</section>
+<!-- Section 2: Background -->
+<section>
+<div class="container">
+<div class="section-label">1973 — Background</div>
+<h2>An Oil Crisis Drove the Original Experiment</h2>
+<p>In October 1973, the Yom Kippur War erupted in the Middle East. The Organization of Arab Petroleum Exporting Countries (OAPEC) announced an oil embargo against Western nations supporting Israel. The United States bore the brunt. Gas station lines stretched for miles, odd-even rationing began across states, and heating oil ran short. Oil prices surged roughly 45 percent during the embargo — from about $3 per barrel to nearly $12.<sup><a href="#ref1">[1]</a></sup></p>
+<p>The Nixon administration declared an "energy emergency" and rolled out conservation measures, including lowering highway speed limits and cutting airline flights. One measure seemed elegantly simple: extend daylight saving time to year-round. The logic was straightforward — an extra hour of natural evening light meant people delayed turning on their lights, reducing electricity consumption.</p>
+<div class="stats">
+<div class="stat-card">
+<div class="stat-num">45%</div>
+<div class="stat-label">Oil price surge<br/>during embargo</div>
+</div>
+<div class="stat-card">
+<div class="stat-num">38 days</div>
+<div class="stat-label">From bill introduction<br/>to presidential signature</div>
+</div>
+<div class="stat-card">
+<div class="stat-num">79%</div>
+<div class="stat-label">Public approval<br/>when law passed</div>
+</div>
+</div>
+<p>On December 15, 1973, Nixon signed the Emergency Daylight Saving Time Energy Conservation Act (Public Law 93-182).<sup><a href="#ref2">[2]</a></sup> Beginning January 6, 1974, the entire United States entered permanent daylight saving time. The House passed it 311–88; the Senate 68–10 — a level of bipartisan support exceptionally rare in American legislative history.<sup><a href="#ref3">[3]</a></sup></p>
+<blockquote>
+<p>"Daylight saving time on a year-round basis will mean only a minimum of inconvenience and will involve equal participation by all."</p>
+<cite>— President Nixon, signing statement, December 15, 1973 <sup><a href="#ref4">[4]</a></sup></cite>
+</blockquote>
+</div>
+</section>
+<!-- Section 3: Implementation -->
+<section>
+<div class="container">
+<div class="section-label">January 7, 1974</div>
+<h2>First Workday: Sunrise at 8:27 a.m. in Washington</h2>
+<div class="img-block">
+<img alt="Washington Post coverage, January 7, 1974" src="images/wapo_report.png"/>
+<p class="img-caption">
+<strong>The Washington Post, January 7, 1974</strong> — front-page coverage of the first day of permanent daylight saving time, including accounts of suburban parents describing children leaving for school in pitch darkness with flashlights.
+        Source: <a href="https://www.washingtonian.com/2022/03/15/the-us-tried-permanent-daylight-saving-time-in-the-70s-people-hated-it/" target="_blank">Washingtonian</a> (via Washington Post archives)
+      </p>
+</div>
+<p>On the first workday after permanent daylight saving time took effect, sunrise in Washington, D.C. came at 8:27 a.m. Children headed out into the dark.</p>
+<blockquote>
+<p>"It was jet black outside when my daughter was supposed to leave for school. Some of the children took flashlights with them."</p>
+<cite>— Florence Bauer, Springfield, Virginia, speaking to The Washington Post, January 7, 1974 <sup><a href="#ref5">[5]</a></sup></cite>
+</blockquote>
+<div class="img-block">
+<img alt="Children waiting for school in darkness, 1974" src="images/dark_morning_kids.jpg"/>
+<p class="img-caption">
+<strong>Children waiting for school in darkness during the 1974 permanent daylight saving time experiment.</strong>
+        Source: <a href="https://growingbydegrees.ca/permanent-dst-dark-mornings/" target="_blank">Growing By Degrees</a> (via historical archives)
+      </p>
+</div>
+<p>Across the Eastern United States, winter sunrises had been pushed to 8 a.m. or later; in parts of the North, sunrise crept past 9:30 a.m. Within days of the law taking effect, accidents began to pile up:</p>
+<ul style="list-style:none;margin:20px 0 28px;">
+<li style="padding:10px 0;border-bottom:1px solid #1e2535;color:#b0aaa0;font-size:0.95rem;">📍 <strong style="color:#e8e4dc;">Alexandria, Virginia</strong> — January 7: a 6-year-old girl struck by a car on her way to school, leg broken</li>
+<li style="padding:10px 0;border-bottom:1px solid #1e2535;color:#b0aaa0;font-size:0.95rem;">📍 <strong style="color:#e8e4dc;">Prince George's County, Maryland</strong> — February: two students injured walking to school in the dark</li>
+<li style="padding:10px 0;color:#b0aaa0;font-size:0.95rem;">📍 <strong style="color:#e8e4dc;">Florida</strong> — within the first two weeks: 8 children killed on their way to school (vs. 2 the previous year) <sup><a href="#ref6">[6]</a></sup></li>
+</ul>
+<div class="img-block">
+<img alt="Associated Press archive photo, 1974" src="images/ap_archive.jpg"/>
+<p class="img-caption">
+<strong>Associated Press archive photograph documenting the 1974 permanent daylight saving time experiment.</strong>
+        Source: <a href="https://www.witf.org/2022/03/15/the-u-s-tried-permanent-daylight-saving-time-in-the-1970s-then-quickly-rejected-it/" target="_blank">WITF Public Media</a> (via AP archives)
+      </p>
+</div>
+<p>DST expert and author of <em>Seize the Daylight</em>, David Prerau, noted that in Florida, eight children were killed on their way to school in the first two weeks of winter daylight saving time — compared with two the previous year — and "it became a big issue."<sup><a href="#ref6">[6]</a></sup> Florida's Commissioner of Education, Floyd T. Christian, submitted a memorandum to the State Board of Education on January 28, 1974, documenting how school districts had responded: 55 districts pushed back start times by 30 minutes to an hour, while 12 made no adjustments.<sup><a href="#ref7">[7]</a></sup></p>
+<blockquote>
+<p>"It's time to recognize that we may well have made a mistake."</p>
+<cite>— Senator Dick Clark of Iowa, congressional speech, January 28, 1974</cite>
+</blockquote>
+</div>
+</section>
+<!-- Section 4: Data & Opinion -->
+<section>
+<div class="container">
+<div class="section-label">Public Opinion &amp; Data</div>
+<h2>Approval: 79% → 42% — But the Data Is More Nuanced</h2>
+<div class="img-grid">
+<div class="img-block" style="margin:0">
+<img alt="Providence Journal archive, 1974" src="images/ri_archive_1.png"/>
+<p class="img-caption">
+<strong>Providence Journal, 1974</strong> — rediscovered by WPRI-TV in July 2026 after the House passed the Sunshine Protection Act.
+          Source: <a href="https://www.wpri.com/news/local-news/archives-show-how-permanent-dst-played-out-in-1970s/" target="_blank">WPRI-TV</a>
+</p>
+</div>
+<div class="img-block" style="margin:0">
+<img alt="Providence Journal archive, 1974 — second page" src="images/ri_archive_2.png"/>
+<p class="img-caption">
+<strong>Providence Journal, 1974 (second page)</strong> — these archives resurfaced in July 2026 as Congress debated the Sunshine Protection Act.
+          Source: <a href="https://www.wpri.com/news/local-news/archives-show-how-permanent-dst-played-out-in-1970s/" target="_blank">WPRI-TV</a>
+</p>
+</div>
+</div>
+<p>According to The New York Times, public approval plummeted from <strong>79 percent</strong> in December 1973 to just <strong>42 percent</strong> by February 1974.<sup><a href="#ref8">[8]</a></sup></p>
+<p>The data, however, told a more complicated story. The National Safety Council's February report showed pre-sunrise fatalities had risen from 19 to 20 compared with the previous year — a modest increase — while afternoon accidents fell as evening light improved. The Department of Transportation's research also confirmed that year-round daylight saving time reduced overall traffic accidents.<sup><a href="#ref9">[9]</a></sup></p>
+<div class="note-box">
+<p><strong>Note:</strong> The debate over permanent daylight saving time involves genuine disagreement among researchers and policymakers. The American Academy of Sleep Medicine (AASM) and 20 other medical organizations support permanent <em>standard time</em>, citing circadian biology. Proponents of permanent daylight saving time cite benefits for evening activity, economic output, and the elimination of clock-change disruptions. Both positions are supported by research.</p>
+</div>
+<p>One structural factor that shaped the 1974 outcome was geographic variation: the United States spans a wide range of latitudes, and winter sunrise times differ dramatically by region. For Florida or Texas, a winter sunrise delayed to around 7 a.m. remained tolerable. For Minnesota, Maine, or Kansas, where winter sunrises already came around 8 a.m., an additional hour meant children would not see their first ray of sunlight until nearly 9 — by which time they were already in school.</p>
+<div class="debate">
+<div class="debate-box pro">
+<h4>Arguments for Permanent DST</h4>
+<ul>
+<li>More evening natural light</li>
+<li>Eliminates clock-change sleep disruption</li>
+<li>Fewer afternoon traffic accidents</li>
+<li>Boosts evening economic activity</li>
+<li>Ends the twice-yearly clock ritual</li>
+</ul>
+</div>
+<div class="debate-box con">
+<h4>Arguments Against Permanent DST</h4>
+<ul>
+<li>Longer dark winter mornings</li>
+<li>Safety concerns for children commuting</li>
+<li>Northern states disproportionately affected</li>
+<li>Sleep medicine community favors permanent standard time</li>
+<li>1974 experiment provides a cautionary precedent</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Repeal -->
+<section>
+<div class="container">
+<div class="section-label">1974 — Repeal</div>
+<h2>Less Than Ten Months: The Clocks Went Back</h2>
+<div class="timeline">
+<div class="tl-item">
+<div class="tl-date">Jan 28, 1974</div>
+<div class="tl-dot"></div>
+<div class="tl-text">Senator Bob Dole introduces S. 2894, calling for termination of the experiment <sup><a href="#ref10">[10]</a></sup></div>
+</div>
+<div class="tl-item">
+<div class="tl-date">Aug 9, 1974</div>
+<div class="tl-dot"></div>
+<div class="tl-text">Nixon resigns; Ford sworn in as president — congressional action accelerates</div>
+</div>
+<div class="tl-item">
+<div class="tl-date">Aug 19, 1974</div>
+<div class="tl-dot"></div>
+<div class="tl-text">House passes H.R. 16102, restoring standard time during the darkest winter months</div>
+</div>
+<div class="tl-item">
+<div class="tl-date">Sep 30, 1974</div>
+<div class="tl-dot"></div>
+<div class="tl-text">Senate passes the bill</div>
+</div>
+<div class="tl-item">
+<div class="tl-date">Oct 5, 1974</div>
+<div class="tl-dot"></div>
+<div class="tl-text">President Ford signs; becomes Public Law 93-434 <sup><a href="#ref11">[11]</a></sup></div>
+</div>
+<div class="tl-item">
+<div class="tl-date">Oct 27, 1974</div>
+<div class="tl-dot"></div>
+<div class="tl-text" style="color:#7ab3d4;font-weight:600;">American clocks fall back to standard time. The permanent DST experiment is officially over.</div>
+</div>
+</div>
+<blockquote>
+<p>"Energy savings must be balanced against a majority of the public's distaste for the observance of Daylight Saving Time."</p>
+<cite>— Senate deliberations on H.R. 16102, 1974</cite>
+</blockquote>
+<p>The following spring, in 1975, the United States briefly resumed daylight saving time, but only through that autumn. Congress ultimately chose not to renew it, and the country returned to the traditional twice-yearly clock change — a practice that continues to this day.</p>
+</div>
+</section>
+<!-- Ending -->
+<div class="ending">
+<div class="year">1974</div>
+<p>On that winter morning, the image of children walking to school by flashlight became the most concrete expression of a debate that had seemed abstract in December.</p>
+<p style="margin-top:32px;font-size:0.9rem;color:#2a3548;font-style:normal;">In July 2026, the House passed the Sunshine Protection Act 308–117. The bill now awaits the Senate.</p>
+</div>
+<!-- Sources -->
+<div class="sources">
+<div class="container">
+<h3>Sources</h3>
+<ol>
+<li id="ref1">Wikipedia. <em>1973 oil crisis.</em> <a href="https://en.wikipedia.org/wiki/1973_oil_crisis" target="_blank">en.wikipedia.org/wiki/1973_oil_crisis</a></li>
+<li id="ref2">Congress.gov. <em>H.R.11324 – 93rd Congress: Emergency Daylight Saving Time Energy Conservation Act.</em> <a href="https://www.congress.gov/bill/93rd-congress/house-bill/11324/titles" target="_blank">congress.gov</a></li>
+<li id="ref3">GovTrack.us. <em>H.R. 11324 (93rd Congress): Daylight Saving Time Act.</em> <a href="https://www.govtrack.us/congress/bills/93/hr11324" target="_blank">govtrack.us</a></li>
+<li id="ref4">The American Presidency Project. <em>Statement on Signing the Emergency Daylight Saving Time Energy Conservation Act of 1973</em> (December 15, 1973). <a href="https://www.presidency.ucsb.edu/documents/statement-signing-the-emergency-daylight-saving-time-energy-conservation-act-1973" target="_blank">presidency.ucsb.edu</a></li>
+<li id="ref5">Beaujon, Andrew. <em>The US Tried Permanent Daylight Saving Time in the '70s. People Hated It.</em> Washingtonian. <a href="https://www.washingtonian.com/2022/03/15/the-us-tried-permanent-daylight-saving-time-in-the-70s-people-hated-it/" target="_blank">washingtonian.com</a></li>
+<li id="ref6">WKMG ClickOrlando. <em>Florida once tried year-round daylight saving time. Here's what happened.</em> (January 8, 2025). <a href="https://www.clickorlando.com/features/2025/01/08/florida-once-tried-year-round-daylight-saving-time-heres-what-happened/" target="_blank">clickorlando.com</a></li>
+<li id="ref7">Florida Memory / State Archives of Florida. <em>Memorandum from Floyd T. Christian, Florida Commissioner of Education</em> (January 28, 1974). <a href="https://www.floridamemory.com/items/show/350887" target="_blank">floridamemory.com</a></li>
+<li id="ref8">Chicago Sun-Times / USA TODAY. <em>Permanent daylight saving time: America tried it before and it didn't go well.</em> (March 17, 2022). <a href="https://chicago.suntimes.com/2022/3/17/22983225/permanent-daylight-saving-time-america-tried-before-and-it-didnt-go-well" target="_blank">chicago.suntimes.com</a></li>
+<li id="ref9">U.S. Department of Transportation. <em>The Year-Round Daylight Saving Time Study, Volume I: Interim Report</em> (June 1974). <a href="https://rosap.ntl.bts.gov/view/dot/10504/dot_10504_DS1.pdf" target="_blank">rosap.ntl.bts.gov</a></li>
+<li id="ref10">Congress.gov. <em>S.2894 – 93rd Congress: A bill to terminate the Emergency Daylight Saving Time Energy Conservation Act of 1973</em> (January 28, 1974). <a href="https://www.congress.gov/bill/93rd-congress/senate-bill/2894" target="_blank">congress.gov</a></li>
+<li id="ref11">GovTrack.us. <em>H.R. 16102 (93rd Congress).</em> Enacted October 5, 1974 (Public Law 93-434). <a href="https://www.govtrack.us/congress/bills/93/hr16102" target="_blank">govtrack.us</a></li>
+<li id="ref12">CBS News. <em>House passes bill to make daylight saving time permanent.</em> (July 15, 2026). <a href="https://www.cbsnews.com/news/daylight-saving-time-permanent-house-vote/" target="_blank">cbsnews.com</a></li>
+</ol>
+</div>
+</div>
+</body>
+</html>
