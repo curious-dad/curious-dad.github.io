@@ -3,7 +3,7 @@ locale = 'en-US'
 title = 'Curious Dad'
 
 [params]
-  description = 'Notes on family, technology, learning, and the wonderfully curious work of being a dad.'
+  description = 'Stories about history, nature, our restless planet, and the technology that helps us understand it.'
   author = 'Curious Dad'
 
 [permalinks]

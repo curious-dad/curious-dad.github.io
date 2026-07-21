@@ -1,8 +1,8 @@
 ---
 title: "Curious Dad"
-description: "Notes on family, technology, learning, and the wonderfully curious work of being a dad."
+description: "Stories about history, nature, our restless planet, and the technology that helps us understand it."
 ---
 
-Welcome. I’m a dad who likes asking better questions, making useful things, and noticing the small moments that make a big life.
+Welcome. I’m a dad who likes old stories, wild places, the forces that shape our planet, and useful technology.
 
-This is my little corner of the internet for field notes on parenting, technology, learning, and the experiments that happen in between.
+This is my little corner of the internet for following whatever makes me stop and wonder—whether it happened centuries ago, under our feet, out in the woods, or inside a machine.

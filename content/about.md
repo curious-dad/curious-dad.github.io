@@ -5,8 +5,8 @@ description: "A little bit about Curious Dad."
 
 ## Hi, I’m Curious Dad
 
-I write about the practical, funny, and occasionally chaotic adventure of raising a family while staying curious about the world.
+I’m a dad who never quite grew out of asking why. I’m drawn to forgotten history, wild places, the forces moving beneath our feet, and the occasional piece of technology that changes how we see the world.
 
-You’ll find notes here about building things, learning in public, family rituals, technology with a human face, and whatever question I can’t stop thinking about.
+You’ll find stories here about people who came before us, the natural world around us, our restless planet, and whatever question I can’t stop thinking about.
 
 Thanks for stopping by.
