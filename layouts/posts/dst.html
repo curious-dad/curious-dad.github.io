@@ -10,7 +10,7 @@
   body { font-family: 'Georgia', serif; background: #0e1117; color: #e8e6e0; line-height: 1.9; }
 
   .hero {
-    position: relative; height: 100vh; min-height: 600px;
+    position: relative; min-height: 500px; padding: 132px 0 76px;
     display: flex; align-items: center; justify-content: center;
     overflow: hidden; background: #060810;
   }
@@ -20,10 +20,10 @@
   .hero-tag { display: inline-block; background: #2a6496; color: #fff; font-size: 12px; letter-spacing: 3px; padding: 6px 18px; border-radius: 2px; margin-bottom: 28px; font-family: sans-serif; font-weight: 700; text-transform: uppercase; }
   .hero h1 { font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 700; line-height: 1.2; color: #f5f0e8; margin-bottom: 20px; }
   .hero h1 em { color: #7ab3d4; font-style: normal; }
-  .hero-sub { font-size: 1.05rem; color: #8a9ab5; max-width: 620px; margin: 0 auto 40px; font-family: sans-serif; }
+  .hero-sub { font-size: 1.05rem; color: #8a9ab5; max-width: 620px; margin: 0 auto 24px; font-family: sans-serif; }
   .hero-date { font-size: 12px; color: #4a5568; font-family: sans-serif; letter-spacing: 2px; text-transform: uppercase; }
-  .scroll-hint { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); color: #3a4a5e; font-size: 22px; animation: bounce 2s infinite; }
-  @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
+  .scroll-hint { position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%); color: #7ab3d4; font-family: sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-decoration: none; text-transform: uppercase; white-space: nowrap; }
+  .scroll-hint:hover { color: #b6d6e8; }
 
   .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
   section { padding: 80px 0; border-bottom: 1px solid #1e2535; }
@@ -98,7 +98,13 @@
   .article-site-links { display: flex; padding: 2px 6px; border: 1px solid #2a3548; border-radius: 999px; background: rgba(14,17,23,.88); backdrop-filter: blur(8px); }
   .article-site-links a { padding: 6px 9px; color: #8a9ab5; font-size: 12px; text-decoration: none; }
   .article-site-links a:hover { color: #7ab3d4; }
-  @media(max-width:600px) { .article-site-links { display: none; } }
+  @media(max-width:600px) {
+    .hero { min-height: 0; padding: 110px 0 64px; }
+    .hero-tag { margin-bottom: 20px; }
+    .hero-sub { margin-bottom: 18px; }
+    .article-site-links { display: none; }
+    section { padding: 62px 0; }
+  }
 </style>
 </head>
 <body>
@@ -119,10 +125,10 @@
 <p class="hero-sub">After years of advocacy, the Sunshine Protection Act has passed the House. As the debate intensifies, history offers a reference point.</p>
 <p class="hero-date">1973 – 1974 · United States</p>
 </div>
-<div class="scroll-hint">↓</div>
+<a class="scroll-hint" href="#story">Read the story ↓</a>
 </div>
 <!-- Section 1: Present -->
-<section>
+<section id="story">
 <div class="container">
 <div class="section-label">2026 — The Present</div>
 <h2>The Bill Passes the House. The Debate Resurfaces.</h2>
