@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="zh-en">
+<html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -275,7 +275,7 @@
     }
   </style>
 </head>
-<body>
+<body class="show-en">
 <div class="article-site-nav">
 <a class="article-site-brand" href="{{ .Site.Home.RelPermalink }}" aria-label="Curious Dad home">✦</a>
 <nav class="article-site-links" aria-label="Site navigation">
@@ -285,8 +285,8 @@
 </div>
 <!-- Language Toggle -->
 <div class="lang-toggle">
-<button class="lang-btn active" id="btn-zh" onclick="setLang('zh')">中文</button>
-<button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
+<button class="lang-btn" id="btn-zh" onclick="setLang('zh')">中文</button>
+<button class="lang-btn active" id="btn-en" onclick="setLang('en')">English</button>
 </div>
 <!-- ══════════════════════════════════════════
      HERO
@@ -698,10 +698,12 @@
 <script>
   function setLang(lang) {
     if (lang === 'en') {
+      document.documentElement.lang = 'en';
       document.body.classList.add('show-en');
       document.getElementById('btn-en').classList.add('active');
       document.getElementById('btn-zh').classList.remove('active');
     } else {
+      document.documentElement.lang = 'zh-CN';
       document.body.classList.remove('show-en');
       document.getElementById('btn-zh').classList.add('active');
       document.getElementById('btn-en').classList.remove('active');
