@@ -14,17 +14,18 @@
 <link href="assets/style.css" rel="stylesheet"/>
 </head>
 <body>
-<header class="site-header">
-<div class="container">
-    <a href="{{ .Site.Home.RelPermalink }}">Curious Dad</a>  |  Seattle City Stories  | 
-    <a href="https://www.nws.usace.army.mil/Missions/Civil-Works/Locks-and-Dams/Chittenden-Locks/" rel="noopener noreferrer">U.S. Army Corps of Engineers — Official Page</a>
-     | 
-    <a href="index-zh.html">中文版</a>
+<div class="article-site-nav">
+<a class="article-site-brand" href="{{ .Site.Home.RelPermalink }}" aria-label="Curious Dad home">✦</a>
+<nav class="article-site-links" aria-label="Site navigation">
+<a href="{{ .Site.Home.RelPermalink }}">Posts</a>
+<a href="{{ "about/" | relURL }}">About</a>
+</nav>
 </div>
-</header>
-<main>
-<div class="container">
-<header class="article-header">
+<div class="lang-switch"><a href="index-zh.html">中文 →</a></div>
+<header class="hero">
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
 <span class="article-category">Engineering · History · Nature</span>
 <h1 class="article-title">Ballard Locks: Seattle's Gateway Between Salt and Fresh Water</h1>
 <p class="article-subtitle">How a single set of concrete lock chambers keeps the Pacific Ocean out of Seattle's freshwater lakes — and why that problem didn't exist before the canal was built.</p>
@@ -33,11 +34,10 @@
 <span>📍 Seattle, Washington</span>
 <span>⏱ 12-minute read</span>
 </div>
+</div>
 </header>
-<figure class="cover-image">
-<img alt="Aerial view of the Ballard Locks (Hiram M. Chittenden Locks), Seattle" src="assets/images/image-01.jpg"/>
-<figcaption>Aerial view of the Ballard Locks, showing the large and small lock chambers side by side, separating Puget Sound from Seattle's inland freshwater waterway. Photo: Greater Seattle on the Cheap</figcaption>
-</figure>
+<main>
+<div class="container">
 <article class="article-body">
 <p>
         On a summer afternoon, a sailboat glides into a concrete channel at the edge of Seattle's Ballard neighborhood. The gates close behind the hull. The water begins to rise — not because of the tide, but because valves engineered more than a century ago are flooding the chamber. Within minutes, the boat sits six meters above Puget Sound. The far gates swing open, and ahead lies a completely different body of water: darker, calmer, fresh.
