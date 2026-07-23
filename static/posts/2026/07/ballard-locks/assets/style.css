@@ -39,74 +39,6 @@ body {
   font-size: 17px;
 }
 
-/* 与站内专题文章一致的悬浮导航 */
-.article-site-nav {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-sans);
-}
-
-.article-site-brand {
-  width: 40px;
-  height: 40px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #087f5b;
-  color: #fff;
-  text-decoration: none;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.28);
-}
-
-.article-site-links {
-  display: flex;
-  padding: 2px 6px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 999px;
-  background: rgba(9, 31, 47, 0.88);
-  backdrop-filter: blur(8px);
-}
-
-.article-site-links a {
-  padding: 6px 9px;
-  color: #c7d9e6;
-  font-size: 12px;
-  text-decoration: none;
-}
-
-.article-site-links a:hover { color: #fff; }
-
-.lang-switch {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 100;
-}
-
-.lang-switch a {
-  display: inline-block;
-  padding: 7px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 4px;
-  background: rgba(9, 31, 47, 0.88);
-  color: #d7e6f0;
-  font-family: var(--font-sans);
-  font-size: 12px;
-  text-decoration: none;
-  backdrop-filter: blur(8px);
-  transition: all 0.2s;
-}
-
-.lang-switch a:hover {
-  border-color: #fff;
-  color: #fff;
-}
-
 /* 主容器 */
 .container {
   max-width: 860px;
@@ -346,6 +278,5 @@ blockquote p {
   .hero { min-height: 0; padding: 108px 20px 64px; }
   .article-title { font-size: 2rem; }
   .article-meta { gap: 0.6rem 1rem; }
-  .article-site-links { display: none; }
   .section { padding: 48px 0; }
 }

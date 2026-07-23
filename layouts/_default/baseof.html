@@ -3,10 +3,14 @@
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body>
+  <body{{ if eq .Section "posts" }} class="article-page"{{ end }}>
     <a class="skip-link" href="#main">Skip to content</a>
     <div class="site-shell">
-      {{ partial "header.html" . }}
+      {{ if eq .Section "posts" }}
+        {{ partial "article-nav.html" (dict "context" .) }}
+      {{ else }}
+        {{ partial "header.html" . }}
+      {{ end }}
       <main id="main" class="site-main">
         {{ block "main" . }}{{ end }}
       </main>
