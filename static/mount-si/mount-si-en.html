@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mount Si &amp; Haystack: The Mythic Mountain in Seattle's Backyard</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --forest: #2D5016; --moss: #4A7C2F; --stone: #6B7280;
+  --cream: #FAFAF7; --ink: #1C1917; --muted: #57534E;
+  --border: #E7E5E4; --accent: #D97706;
+  --quote-bg: #F0F4E8; --tag-bg: #ECFDF5; --tag-text: #065F46;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Georgia', serif; background: var(--cream); color: var(--ink); line-height: 1.85; font-size: 17.5px; }
+.hero { position: relative; height: 94vh; min-height: 560px; overflow: hidden; display: flex; align-items: flex-end; }
+.hero img.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; filter: brightness(0.58); }
+.hero-overlay { position: relative; z-index: 2; padding: 3rem 2rem 4rem; max-width: 820px; margin: 0 auto; width: 100%; }
+.hero-tag { display: inline-block; background: var(--accent); color: #fff; font-family: 'Helvetica Neue', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.28rem 0.75rem; border-radius: 2px; margin-bottom: 1.2rem; }
+.hero h1 { font-size: clamp(2.1rem, 5.5vw, 3.6rem); font-weight: 700; color: #fff; line-height: 1.15; text-shadow: 0 2px 24px rgba(0,0,0,0.55); margin-bottom: 1rem; }
+.hero-sub { color: rgba(255,255,255,0.82); font-size: 1.05rem; font-style: italic; text-shadow: 0 1px 8px rgba(0,0,0,0.4); margin-bottom: 1.8rem; }
+.hero-meta { display: flex; gap: 1.6rem; flex-wrap: wrap; color: rgba(255,255,255,0.65); font-family: 'Helvetica Neue', sans-serif; font-size: 0.8rem; }
+.container { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+article { padding: 4rem 0 5rem; }
+.lead { font-size: 1.18rem; color: var(--muted); border-left: 4px solid var(--moss); padding-left: 1.3rem; margin-bottom: 3rem; font-style: italic; line-height: 1.95; }
+h2 { font-size: 1.6rem; font-weight: 700; color: var(--forest); margin: 3.2rem 0 1.1rem; padding-bottom: 0.45rem; border-bottom: 2px solid var(--border); }
+h2 .icon { margin-right: 0.4rem; }
+p { margin-bottom: 1.5rem; }
+p a.src { font-size: 0.72rem; vertical-align: super; color: var(--moss); text-decoration: none; font-family: 'Helvetica Neue', sans-serif; margin-left: 1px; }
+p a.src:hover { text-decoration: underline; }
+.img-block { margin: 2.4rem -0.5rem; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 28px rgba(0,0,0,0.13); }
+.img-block img { width: 100%; display: block; object-fit: cover; max-height: 500px; }
+.img-caption { background: #F5F5F0; padding: 0.65rem 1.1rem; font-size: 0.78rem; color: var(--stone); font-family: 'Helvetica Neue', sans-serif; font-style: italic; border-top: 1px solid var(--border); }
+.pullquote { background: var(--quote-bg); border-left: 5px solid var(--moss); border-radius: 0 8px 8px 0; padding: 1.5rem 1.8rem; margin: 2.4rem 0; font-size: 1.07rem; font-style: italic; color: var(--forest); line-height: 1.85; }
+.pullquote cite { display: block; margin-top: 0.7rem; font-size: 0.8rem; color: var(--stone); font-style: normal; font-family: 'Helvetica Neue', sans-serif; }
+.img-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2.4rem 0; }
+.img-duo .img-block { margin: 0; }
+.img-duo .img-block img { max-height: 270px; }
+.sources { margin: 3.5rem 0 1rem; padding-top: 2rem; border-top: 2px solid var(--border); }
+.sources h3 { font-size: 0.85rem; font-family: 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); margin-bottom: 1rem; }
+.sources ol { padding-left: 1.4rem; }
+.sources li { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.5rem; font-family: 'Helvetica Neue', sans-serif; line-height: 1.6; }
+.sources li a { color: var(--moss); }
+.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 2rem 0 0; }
+.tag { background: var(--tag-bg); color: var(--tag-text); font-family: 'Helvetica Neue', sans-serif; font-size: 0.76rem; padding: 0.28rem 0.7rem; border-radius: 20px; font-weight: 600; }
+.article-footer { background: #F0F0EB; border-top: 1px solid var(--border); padding: 2rem 0; font-family: 'Helvetica Neue', sans-serif; font-size: 0.8rem; color: var(--stone); text-align: center; line-height: 1.7; }
+.lang-bar { background: var(--forest); padding: 0.6rem 1.5rem; text-align: right; }
+.lang-bar a { color: rgba(255,255,255,0.75); font-family: 'Helvetica Neue', sans-serif; font-size: 0.78rem; text-decoration: none; margin-left: 1rem; }
+.lang-bar a:hover { color: #fff; }
+.lang-bar a.active { color: #fff; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.5); }
+@media (max-width: 600px) {
+  .img-duo { grid-template-columns: 1fr; }
+  h2 { font-size: 1.35rem; }
+  body { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+<div class="lang-bar">
+<a href="mount-si-zh.html">中文</a>
+<a class="active" href="mount-si-en.html">English</a>
+</div>
+<div class="hero">
+<img alt="Mount Si panorama, North Bend, Washington State" class="hero-bg" src="images/hero_mount_si.jpg"/>
+<div class="hero-overlay">
+<span class="hero-tag">Pacific Northwest · Nature &amp; History</span>
+<h1>Mount Si &amp; Haystack<br/>The Mythic Mountain in Seattle's Backyard</h1>
+<p class="hero-sub">One mountain, one rock, ten thousand years of stories</p>
+<div class="hero-meta">
+<span>⏱ 6-minute read</span>
+<span>📍 North Bend, Washington</span>
+<span>🗓 July 2026</span>
+</div>
+</div>
+</div>
+<div class="container">
+<article>
+<p class="lead">
+  Drive east from Seattle on I-90 for less than 45 minutes, and a steep mountain will suddenly lunge into view on your right — its western face nearly vertical, like a wall shoved up from underground. That's <strong>Mount Si</strong>, Washington's most-hiked mountain, and a place that holds within it myth, wildfire, geology, and the quiet labor of thousands of volunteers.
+</p>
+<h2><span class="icon">🌋</span>This Mountain Came from the Ocean Floor</h2>
+<p>
+  The rocks of Mount Si date back to the Jurassic and Cretaceous periods — roughly 65 to 150 million years ago. It's not a volcano. It's the remnant of an ancient oceanic plate volcano: when the Pacific Plate subducted beneath North America, this chunk of seafloor was scraped off and slowly pushed upward, eventually settling at the western edge of the Cascades at an elevation of 4,167 feet.<a class="src" href="https://en.wikipedia.org/wiki/Mount_Si" target="_blank">[1]</a>
+</p>
+<p>
+  Every rock you step on was once resting on the Pacific seafloor. And the lush forest covering the slopes today is only about eighty years old — a wildfire in 1893 burned through the original old-growth almost entirely.<a class="src" href="https://snoqualmievalleymuseum.org/2020/11/23/from-the-collection-1893-fires/" target="_blank">[2]</a>
+</p>
+<div class="img-block">
+<img alt="Snoqualmie Valley and Mount Si panorama" src="images/valley_mount_si.jpg"/>
+<div class="img-caption">The Snoqualmie Valley and Mount Si. The valley was carved by glaciers; Mount Si rises on the right. © King County / Mountains to Sound Greenway Trust</div>
+</div>
+<h2><span class="icon">🌙</span>Where the Moon God Fell</h2>
+<p>
+  People have lived in this valley for at least nine thousand years. The Snoqualmie people called the mountain <em>q̓əlbc</em> in their Lushootseed language, and held it as sacred ground.<a class="src" href="https://en.wikipedia.org/wiki/Mount_Si" target="_blank">[1]</a>
+</p>
+<div class="pullquote">
+  The Moon god ordered a rope of cedar bark stretched between the earth and the sky. Coyote climbed up and stole the Moon's forests, fire, and daylight, bringing them back to the people below. The Moon gave chase in fury — but the rope broke, and he fell to his death. <strong>His body became the mountain we now call Mount Si.</strong> Some say you can still see his face in the rocks near the summit.
+  <cite>— Snoqualmie oral tradition</cite>
+</div>
+<p>
+  The structure echoes the myth of Prometheus: a trickster steals light from the divine and gives it to humanity. But in the Snoqualmie version, it is the god who pays the price — and that price becomes a mountain.
+</p>
+<h2><span class="icon">👴</span>"Uncle Si" and How the Mountain Got Its Name</h2>
+<p>
+  In 1860, a man named Josiah Merritt built a cabin at the base of the mountain. Neighbors called him "Uncle Si." He grew potatoes, kept hogs, tended an orchard, and devised an extended plow handle so he could ride a horse while directing his oxen — an improvisation made necessary by a foot disability he'd lived with for years.<a class="src" href="https://snoqualmievalleymuseum.org/2026/02/27/josiah-uncle-si-merrit/" target="_blank">[3]</a>
+</p>
+<p>
+  Merritt died in February 1882, a few days after splitting rails in the cold and coming down with pneumonia. He was buried in the Fall City cemetery. Neighbors began calling the peak "Uncle Si's Mountain," and the name shortened from there. An ordinary man's nickname became one of Washington's most recognizable place names.
+</p>
+<div class="img-duo">
+<div class="img-block">
+<img alt="Mount Si trail through forest" src="images/trail_forest.jpg"/>
+<div class="img-caption">The Mount Si trail winds through dense Douglas fir forest</div>
+</div>
+<div class="img-block">
+<img alt="View from Mount Si summit" src="images/summit_view.jpg"/>
+<div class="img-caption">Looking down from the summit — on clear days, Seattle's skyline is visible</div>
+</div>
+</div>
+<h2><span class="icon">🥾</span>The Trail: Built, Loved to Death, and Rebuilt</h2>
+<p>
+  The Mountaineers cut the main trail in 1973.<a class="src" href="https://archive.seattletimes.com/archive/20061029/trail29m/rehabilitating-mount-si-trail-was-a-labor-of-love" target="_blank">[4]</a> Before that, people had been scrambling up unofficial paths for decades. Once a proper trail existed, use exploded — by 2006, roughly 200,000 people were hiking it each year, the equivalent of three sold-out crowds at Seattle's football stadium.
+</p>
+<p>
+  All those boots took a toll. The tread eroded, switchbacks slumped, exposed roots tripped hikers, drainage failed. In 2003, a three-year rehabilitation project began: more than 8,000 feet of trail re-excavated, 22 switchbacks rebuilt, 280 stone steps installed, 816 feet of rock retaining wall laid. Volunteers contributed over 13,000 hours of labor, keeping the total cost to around $100,000.<a class="src" href="https://archive.seattletimes.com/archive/20061029/trail29m/rehabilitating-mount-si-trail-was-a-labor-of-love" target="_blank">[4]</a>
+</p>
+<div class="pullquote">
+  "This was just a way to spend a lot of time in the woods, and doing good work."
+  <cite>— Peter Kingham, DNR crew supervisor, at the 2006 ribbon-cutting, <em>Seattle Times</em></cite>
+</div>
+<p>
+  In October 2006, the completion ceremony was held on the trail itself, under a canopy of autumn leaves. A group of volunteers cut a pink ribbon with a pair of garden shears. No fanfare — just tired, satisfied faces and a mountain that could breathe again.
+</p>
+<h2><span class="icon">🪨</span>Haystack: The Rock at the Top</h2>
+<p>
+  After reaching the summit ridge, most people stop to rest, eat, and take photos. But some keep going — up onto the massive boulder that rises from the ridge like a fist.
+</p>
+<p>
+  The Haystack is named for its resemblance to a farm haystack. It stands 100 feet above the ridge, and reaching the top requires Class 3 scrambling — hands and feet, no rope, real exposure, and rock that isn't always trustworthy.<a class="src" href="https://thealpineguide.com/trail/mount-si" target="_blank">[5]</a> Most hikers don't attempt it. It sits there anyway, a quiet invitation.
+</p>
+<div class="img-block">
+<img alt="Haystack rock at the summit of Mount Si" src="images/haystack_rock.jpg"/>
+<div class="img-caption">The Haystack, seen from the summit ridge. The climbing route is on the north side. © Washington Trails Association</div>
+</div>
+<p>
+  From the town of North Bend or from I-90, Mount Si's summit shows two distinct points against the sky: the main ridge, and the Haystack. That silhouette is what David Lynch saw when he chose this valley as the setting for <em>Twin Peaks</em> in 1990 — the show's name came directly from it.<a class="src" href="https://www.discovernorthbend.com/195/Twin-Peaks-Filming-Locations" target="_blank">[6]</a>
+</p>
+<p>
+  The Snoqualmie people say the Moon god's face is still visible in the rocks near the summit. Many people who climb the Haystack find themselves searching the stone for a face — and sometimes, at a certain angle, they think they see one. There's no answer to whether that's myth or pattern-recognition. But the searching feels like the point.
+</p>
+<h2><span class="icon">🔥</span>Fire, Logging, and the Fight to Protect the Mountain</h2>
+<p>
+  The forest covering Mount Si's slopes today is only about eighty years old. In late summer 1893, a wildfire swept through the Snoqualmie Valley. The <em>Seattle Post-Intelligencer</em> reported flames leaping across the slopes through the night, with cedar losses alone estimated at 60 million board feet — the whole valley choked in smoke.<a class="src" href="https://snoqualmievalleymuseum.org/2020/11/23/from-the-collection-1893-fires/" target="_blank">[2]</a> Decades of logging followed, stripping what the fire had left. The trees you see on the mountain today are the second growth that came after all of that.
+</p>
+<p>
+  Then, in 1976, a quarry company proposed mining the mountain itself. Local residents organized and petitioned the state legislature. In 1977, Washington passed a law creating the Mount Si Conservation Area. It was upgraded to a Natural Resources Conservation Area in 1987, and today covers more than 13,000 acres.<a class="src" href="https://app6.leg.wa.gov/rcw/default.aspx?cite=79A.05.725" target="_blank">[7]</a>
+</p>
+<div class="img-block">
+<img alt="North Bend town with Mount Si in the background" src="images/north_bend_town.jpg"/>
+<div class="img-caption">The town of North Bend, incorporated in 1909, with Mount Si rising behind it. © North Bend Escapes</div>
+</div>
+<p>
+  Stand on a street in North Bend and look up. Mount Si's western face rises almost vertically against the sky. Inside that wall of rock: the memory of a seafloor, a moon god's legend, the ash of an 1893 fire, 13,000 hours of volunteer labor, the opening credits of a cult television show, and the footsteps of more than 100,000 people every year.
+</p>
+<p>
+  It's just a mountain. But it's also a container for every one of those stories.
+</p>
+<div class="sources">
+<h3>Sources</h3>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Mount_Si" target="_blank">Wikipedia: Mount Si</a> — elevation, geology, Lushootseed name, Snoqualmie mythology</li>
+<li><a href="https://snoqualmievalleymuseum.org/2020/11/23/from-the-collection-1893-fires/" target="_blank">Snoqualmie Valley Museum: From the Collection: 1893 Fires</a> — original newspaper accounts of the 1893 fire</li>
+<li><a href="https://snoqualmievalleymuseum.org/2026/02/27/josiah-uncle-si-merrit/" target="_blank">Snoqualmie Valley Museum: Josiah "Uncle Si" Merritt (2026)</a> — detailed biography of Merritt</li>
+<li><a href="https://archive.seattletimes.com/archive/20061029/trail29m/rehabilitating-mount-si-trail-was-a-labor-of-love" target="_blank">Seattle Times: Rehabilitating Mount Si trail was a labor of love (2006)</a> — trail rehabilitation data and quotes</li>
+<li><a href="https://thealpineguide.com/trail/mount-si" target="_blank">The Alpine Guide: Mount Si</a> — Haystack scramble difficulty, annual visitor numbers</li>
+<li><a href="https://www.discovernorthbend.com/195/Twin-Peaks-Filming-Locations" target="_blank">Discover North Bend: Twin Peaks Filming Locations</a> — Twin Peaks filming history</li>
+<li><a href="https://app6.leg.wa.gov/rcw/default.aspx?cite=79A.05.725" target="_blank">Washington RCW 79A.05.725</a> — Mount Si Conservation Area legislation</li>
+</ol>
+</div>
+<div class="tags">
+<span class="tag"># Mount Si</span>
+<span class="tag"># Haystack</span>
+<span class="tag"># North Bend</span>
+<span class="tag"># Washington Hiking</span>
+<span class="tag"># Snoqualmie</span>
+<span class="tag"># Pacific Northwest</span>
+<span class="tag"># Twin Peaks</span>
+<span class="tag"># Conservation</span>
+</div>
+</article>
+</div>
+<div class="article-footer">
+<div class="container">
+<p>Images: King County, Washington Trails Association, Mountains to Sound Greenway Trust, North Bend Escapes, Reddit/EarthPorn</p>
+<p style="margin-top:0.4rem;">Research compiled July 2026 · <a href="mount-si-zh.html" style="color:var(--moss);">阅读中文版</a></p>
+</div>
+</div>
+</body>
+</html>

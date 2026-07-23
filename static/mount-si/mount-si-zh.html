@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mount Si 与 Haystack：西雅图后院的神话之山</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --forest: #2D5016; --moss: #4A7C2F; --stone: #6B7280;
+  --cream: #FAFAF7; --ink: #1C1917; --muted: #57534E;
+  --border: #E7E5E4; --accent: #D97706;
+  --quote-bg: #F0F4E8; --tag-bg: #ECFDF5; --tag-text: #065F46;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Georgia', 'Noto Serif SC', serif; background: var(--cream); color: var(--ink); line-height: 1.9; font-size: 17.5px; }
+.hero { position: relative; height: 94vh; min-height: 560px; overflow: hidden; display: flex; align-items: flex-end; }
+.hero img.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; filter: brightness(0.58); }
+.hero-overlay { position: relative; z-index: 2; padding: 3rem 2rem 4rem; max-width: 820px; margin: 0 auto; width: 100%; }
+.hero-tag { display: inline-block; background: var(--accent); color: #fff; font-family: 'Helvetica Neue', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.28rem 0.75rem; border-radius: 2px; margin-bottom: 1.2rem; }
+.hero h1 { font-size: clamp(2.1rem, 5.5vw, 3.6rem); font-weight: 700; color: #fff; line-height: 1.15; text-shadow: 0 2px 24px rgba(0,0,0,0.55); margin-bottom: 1rem; }
+.hero-sub { color: rgba(255,255,255,0.82); font-size: 1.05rem; font-style: italic; text-shadow: 0 1px 8px rgba(0,0,0,0.4); margin-bottom: 1.8rem; }
+.hero-meta { display: flex; gap: 1.6rem; flex-wrap: wrap; color: rgba(255,255,255,0.65); font-family: 'Helvetica Neue', sans-serif; font-size: 0.8rem; }
+.container { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+article { padding: 4rem 0 5rem; }
+.lead { font-size: 1.2rem; color: var(--muted); border-left: 4px solid var(--moss); padding-left: 1.3rem; margin-bottom: 3rem; font-style: italic; line-height: 1.95; }
+h2 { font-size: 1.6rem; font-weight: 700; color: var(--forest); margin: 3.2rem 0 1.1rem; padding-bottom: 0.45rem; border-bottom: 2px solid var(--border); }
+h2 .icon { margin-right: 0.4rem; }
+p { margin-bottom: 1.5rem; }
+p a.src { font-size: 0.72rem; vertical-align: super; color: var(--moss); text-decoration: none; font-family: 'Helvetica Neue', sans-serif; margin-left: 1px; }
+p a.src:hover { text-decoration: underline; }
+.img-block { margin: 2.4rem -0.5rem; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 28px rgba(0,0,0,0.13); }
+.img-block img { width: 100%; display: block; object-fit: cover; max-height: 500px; }
+.img-caption { background: #F5F5F0; padding: 0.65rem 1.1rem; font-size: 0.78rem; color: var(--stone); font-family: 'Helvetica Neue', sans-serif; font-style: italic; border-top: 1px solid var(--border); }
+.pullquote { background: var(--quote-bg); border-left: 5px solid var(--moss); border-radius: 0 8px 8px 0; padding: 1.5rem 1.8rem; margin: 2.4rem 0; font-size: 1.07rem; font-style: italic; color: var(--forest); line-height: 1.85; }
+.pullquote cite { display: block; margin-top: 0.7rem; font-size: 0.8rem; color: var(--stone); font-style: normal; font-family: 'Helvetica Neue', sans-serif; }
+.img-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2.4rem 0; }
+.img-duo .img-block { margin: 0; }
+.img-duo .img-block img { max-height: 270px; }
+.sources { margin: 3.5rem 0 1rem; padding-top: 2rem; border-top: 2px solid var(--border); }
+.sources h3 { font-size: 0.85rem; font-family: 'Helvetica Neue', sans-serif; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--stone); margin-bottom: 1rem; }
+.sources ol { padding-left: 1.4rem; }
+.sources li { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.5rem; font-family: 'Helvetica Neue', sans-serif; line-height: 1.6; }
+.sources li a { color: var(--moss); }
+.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 2rem 0 0; }
+.tag { background: var(--tag-bg); color: var(--tag-text); font-family: 'Helvetica Neue', sans-serif; font-size: 0.76rem; padding: 0.28rem 0.7rem; border-radius: 20px; font-weight: 600; }
+.article-footer { background: #F0F0EB; border-top: 1px solid var(--border); padding: 2rem 0; font-family: 'Helvetica Neue', sans-serif; font-size: 0.8rem; color: var(--stone); text-align: center; line-height: 1.7; }
+.lang-bar { background: var(--forest); padding: 0.6rem 1.5rem; text-align: right; }
+.lang-bar a { color: rgba(255,255,255,0.75); font-family: 'Helvetica Neue', sans-serif; font-size: 0.78rem; text-decoration: none; margin-left: 1rem; }
+.lang-bar a:hover { color: #fff; }
+.lang-bar a.active { color: #fff; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.5); }
+@media (max-width: 600px) {
+  .img-duo { grid-template-columns: 1fr; }
+  h2 { font-size: 1.35rem; }
+  body { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+<div class="lang-bar">
+<a class="active" href="mount-si-zh.html">中文</a>
+<a href="mount-si-en.html">English</a>
+</div>
+<div class="hero">
+<img alt="Mount Si 全景，North Bend，华盛顿州" class="hero-bg" src="images/hero_mount_si.jpg"/>
+<div class="hero-overlay">
+<span class="hero-tag">太平洋西北 · 自然人文</span>
+<h1>Mount Si 与 Haystack<br/>西雅图后院的神话之山</h1>
+<p class="hero-sub">一座山，一块石头，一万年的故事</p>
+<div class="hero-meta">
+<span>⏱ 阅读约 6 分钟</span>
+<span>📍 华盛顿州 North Bend</span>
+<span>🗓 2026年7月</span>
+</div>
+</div>
+</div>
+<div class="container">
+<article>
+<p class="lead">
+  从西雅图开车向东，走 I-90 不到45分钟，一座陡峭的山峰会突然从公路右侧跃入视野——它的西壁几乎是垂直的，像一堵被人从地底推出来的巨墙。这就是 <strong>Mount Si</strong>，华盛顿州最受欢迎的徒步山，也是一个藏着神话、大火与地质奇迹的地方。
+</p>
+<h2><span class="icon">🌋</span>这座山，其实来自海底</h2>
+<p>
+  Mount Si 的岩石年龄可以追溯到侏罗纪至白垩纪，大约一亿五千万年前。它不是普通的火山，而是一座远古海洋板块火山的残骸——当太平洋板块俯冲进入北美大陆时，这块海底岩石被刮削下来，随地质运动缓慢抬升，最终在喀斯喀特山脉西缘定格，成为今天海拔4,167英尺的山体。<a class="src" href="https://en.wikipedia.org/wiki/Mount_Si" target="_blank">[1]</a>
+</p>
+<p>
+  脚下踩的每一块石头，曾经都在太平洋的海底沉睡过。山坡上那片看起来生机勃勃的森林，其实只有大约八十年的树龄——1893年的一场大火，几乎把原始森林烧了个干净。<a class="src" href="https://snoqualmievalleymuseum.org/2020/11/23/from-the-collection-1893-fires/" target="_blank">[2]</a>
+</p>
+<div class="img-block">
+<img alt="斯诺夸尔米河谷与Mount Si全景" src="images/valley_mount_si.jpg"/>
+<div class="img-caption">斯诺夸尔米河谷与 Mount Si 全景。河谷由冰川塑造，Mount Si 巍然矗立于右侧。© King County / Mountains to Sound Greenway Trust</div>
+</div>
+<h2><span class="icon">🌙</span>月亮神坠落的地方</h2>
+<p>
+  在欧洲人到来之前，这片土地已有人类居住至少九千年。斯诺夸尔米族用他们自己的语言称这座山为 <em>q̓əlbc</em>，并将它视为神圣的存在。<a class="src" href="https://en.wikipedia.org/wiki/Mount_Si" target="_blank">[1]</a>
+</p>
+<div class="pullquote">
+  月亮神命人在天地之间架起一根雪松绳。郊狼沿绳攀上天界，偷走了月亮神珍藏的森林、火焰与阳光，带回人间。月亮神愤怒追赶，绳子断裂，月亮神坠落而死——<strong>他的身体，便化为了今天的 Mount Si</strong>。据说，山顶岩石上至今仍可见月亮神的面容。
+  <cite>——斯诺夸尔米族口述传说</cite>
+</div>
+<p>
+  这个故事的结构与普罗米修斯盗火相似：英雄从神那里偷来光明，带给人间。不同的是，在斯诺夸尔米的版本里，付出代价的是神本身，而那代价，成了一座山。
+</p>
+<h2><span class="icon">👴</span>"西叔"与山名的由来</h2>
+<p>
+  1860年，一位名叫 Josiah Merritt 的老人在 Mount Si 山脚建起了一间小屋。邻居们亲切地叫他"Uncle Si"（西叔）。他种土豆、养猪、打理果园，用一根加长的犁柄骑在马背上耕地——因为他的脚有残疾，这是他自己想出来的办法。<a class="src" href="https://snoqualmievalleymuseum.org/2026/02/27/josiah-uncle-si-merrit/" target="_blank">[3]</a>
+</p>
+<p>
+  1882年，Merritt 在劈完一批木头后染上肺炎，几天后去世，葬在 Fall City 的墓地。人们把那座俯瞰河谷的山峰叫做"Uncle Si 的山"，后来简称 Mount Si。一个普通老人的绰号，就这样变成了华盛顿州最具标志性的地名之一。
+</p>
+<div class="img-duo">
+<div class="img-block">
+<img alt="Mount Si 步道" src="images/trail_forest.jpg"/>
+<div class="img-caption">Mount Si 步道，穿越茂密的道格拉斯冷杉林</div>
+</div>
+<div class="img-block">
+<img alt="Mount Si 山顶俯瞰" src="images/summit_view.jpg"/>
+<div class="img-caption">山顶俯瞰斯诺夸尔米河谷，晴天可见西雅图天际线</div>
+</div>
+</div>
+<h2><span class="icon">🥾</span>步道的诞生与重建</h2>
+<p>
+  1973年，The Mountaineers 登山俱乐部开凿了今天的主步道。<a class="src" href="https://archive.seattletimes.com/archive/20061029/trail29m/rehabilitating-mount-si-trail-was-a-labor-of-love" target="_blank">[4]</a> 此前，人们已经在山上走了几十年的野路。步道建成后，登山人数迅速攀升，到2006年已达每年约二十万人次——相当于西雅图体育场三场满座观众的总和。
+</p>
+<p>
+  这么多脚踩下去，步道很快就撑不住了。路面侵蚀，转弯塌陷，裸露的岩石绊倒行人，排水系统几近失效。2003年，一场历时三年的重建工程启动：超过八千英尺的步道被重新开挖，二十二处转弯重建，两百八十级石阶安装，八百一十六英尺岩石挡土墙铺设。志愿者贡献了超过一万三千工时，把总花费压到了约十万美元。<a class="src" href="https://archive.seattletimes.com/archive/20061029/trail29m/rehabilitating-mount-si-trail-was-a-labor-of-love" target="_blank">[4]</a>
+</p>
+<div class="pullquote">
+  "这只是一种在树林里度过大量时间、同时做些有意义的事的方式。"
+  <cite>——DNR 工程监督员 Peter Kingham，2006年竣工典礼，《西雅图时报》</cite>
+</div>
+<p>
+  2006年10月，竣工典礼在秋叶金黄的山道上举行。一群志愿者用一把园艺剪刀剪断了粉色彩带。没有仪式，只有满山的落叶和疲惫而满足的笑脸。
+</p>
+<h2><span class="icon">🪨</span>Haystack：山顶的那块大石头</h2>
+<p>
+  走到山脊平台之后，大多数人会停下来休息、拍照、吃东西。但还有一部分人，会继续向上——攀上那块从山脊拔地而起的巨型岩石。
+</p>
+<p>
+  Haystack 因形似农场里堆起的干草垛而得名。它高约一百英尺，攀登难度是三级攀岩——需要手脚并用，没有绳索保护，岩石质量也不算好，有真实的坠落风险。<a class="src" href="https://thealpineguide.com/trail/mount-si" target="_blank">[5]</a> 大多数徒步者不会去爬它，但它始终在那里，像一个沉默的邀请。
+</p>
+<div class="img-block">
+<img alt="Mount Si 山顶 Haystack 岩石" src="images/haystack_rock.jpg"/>
+<div class="img-caption">Haystack 岩石，从山脊平台仰望。攀登路线在岩石北侧。© Washington Trails Association</div>
+</div>
+<p>
+  从 North Bend 小镇或 I-90 高速公路上望向 Mount Si，你会看到山顶有两个并立的尖顶：一个是主峰山脊，另一个就是 Haystack。1990年，David Lynch 把这里变成了电视剧《双峰》的拍摄地，剧名"Twin Peaks"正是来自这个轮廓。<a class="src" href="https://www.discovernorthbend.com/195/Twin-Peaks-Filming-Locations" target="_blank">[6]</a>
+</p>
+<p>
+  斯诺夸尔米族的传说讲道，月亮神坠落后，他的面容留在了山顶的岩石上。许多登上 Haystack 的人，会在某个特定角度的岩石纹理中，看到一张模糊的脸。这个问题没有答案，但寻找本身，或许就是意义所在。
+</p>
+<h2><span class="icon">🔥</span>大火、伐木与守护</h2>
+<p>
+  今天山坡上那片郁郁葱葱的森林，其实只有大约八十年的树龄。1893年夏末，一场大火席卷斯诺夸尔米河谷。《西雅图邮讯报》这样描述：火焰在 Mount Si 山坡的灌木丛间蔓延，入夜后可见火光从一片树丛跳向另一片，仅雪松一项损失就达六千万板英尺，整个河谷笼罩在浓烟之中。<a class="src" href="https://snoqualmievalleymuseum.org/2020/11/23/from-the-collection-1893-fires/" target="_blank">[2]</a> 此后数十年，伐木业又将山坡上的原始森林几乎砍伐殆尽。今天山上的树木，是这段历史之后重新生长的次生林。
+</p>
+<p>
+  1976年，一家采石场公司计划在山体上开采岩石。当地居民迅速行动，向州议员请愿。1977年，华盛顿州议会立法创建"Mount Si 保护区"。1987年升级为自然资源保护区，今天面积已超过13,000英亩。<a class="src" href="https://app6.leg.wa.gov/rcw/default.aspx?cite=79A.05.725" target="_blank">[7]</a>
+</p>
+<div class="img-block">
+<img alt="North Bend 小镇与 Mount Si" src="images/north_bend_town.jpg"/>
+<div class="img-caption">North Bend 小镇与 Mount Si 背景。小镇建于1909年，Mount Si 始终是其最醒目的地标。© North Bend Escapes</div>
+</div>
+<p>
+  站在 North Bend 的街道上抬头望去，Mount Si 的西壁几乎垂直地矗立在天际。那堵岩壁里，有海底的记忆，有月亮神的传说，有1893年大火的灰烬，有一万三千小时志愿者的汗水，有《双峰》的神秘氛围，也有每年超过十万双脚踩出的痕迹。
+</p>
+<p>
+  它只是一座山。但它也是所有这些故事的容器。
+</p>
+<div class="sources">
+<h3>参考来源</h3>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Mount_Si" target="_blank">Wikipedia: Mount Si</a> — 海拔、地质、卢舒特西德语名称、斯诺夸尔米神话</li>
+<li><a href="https://snoqualmievalleymuseum.org/2020/11/23/from-the-collection-1893-fires/" target="_blank">Snoqualmie Valley Museum: From the Collection: 1893 Fires</a> — 1893年大火原始报纸记录</li>
+<li><a href="https://snoqualmievalleymuseum.org/2026/02/27/josiah-uncle-si-merrit/" target="_blank">Snoqualmie Valley Museum: Josiah "Uncle Si" Merritt (2026)</a> — Merritt 生平详细记录</li>
+<li><a href="https://archive.seattletimes.com/archive/20061029/trail29m/rehabilitating-mount-si-trail-was-a-labor-of-love" target="_blank">Seattle Times: Rehabilitating Mount Si trail was a labor of love (2006)</a> — 步道重建工程数据与引言</li>
+<li><a href="https://thealpineguide.com/trail/mount-si" target="_blank">The Alpine Guide: Mount Si</a> — Haystack 攀登难度、年访客量</li>
+<li><a href="https://www.discovernorthbend.com/195/Twin-Peaks-Filming-Locations" target="_blank">Discover North Bend: Twin Peaks Filming Locations</a> — 《双峰》拍摄地信息</li>
+<li><a href="https://app6.leg.wa.gov/rcw/default.aspx?cite=79A.05.725" target="_blank">Washington RCW 79A.05.725</a> — Mount Si 保护区立法原文</li>
+</ol>
+</div>
+<div class="tags">
+<span class="tag"># Mount Si</span>
+<span class="tag"># Haystack</span>
+<span class="tag"># North Bend</span>
+<span class="tag"># 华盛顿州徒步</span>
+<span class="tag"># 斯诺夸尔米</span>
+<span class="tag"># 太平洋西北</span>
+<span class="tag"># 双峰</span>
+<span class="tag"># 自然保护</span>
+</div>
+</article>
+</div>
+<div class="article-footer">
+<div class="container">
+<p>图片来源：King County、Washington Trails Association、Mountains to Sound Greenway Trust、North Bend Escapes、Reddit/EarthPorn</p>
+<p style="margin-top:0.4rem;">素材整理：2026年7月 · <a href="mount-si-en.html" style="color:var(--moss);">Read in English</a></p>
+</div>
+</div>
+</body>
+</html>
