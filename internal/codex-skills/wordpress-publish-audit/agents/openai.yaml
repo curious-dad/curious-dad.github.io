@@ -1,0 +1,4 @@
+interface:
+  display_name: "WordPress Publish & Audit"
+  short_description: "Publish articles and verify WordPress layouts"
+  default_prompt: "Use $wordpress-publish-audit to publish this repository article to WordPress and verify its layout with Playwright."

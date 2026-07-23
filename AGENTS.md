@@ -2,6 +2,15 @@
 
 These instructions apply to the entire repository.
 
+## Repository-internal skills
+
+- Codex skills for this repository live under `internal/codex-skills/`.
+- Use `internal/codex-skills/wordpress-publish-audit/SKILL.md` for WordPress
+  publishing, WordPress article-formatting repairs, homepage excerpt behavior,
+  and Playwright verification of WordPress articles.
+- Treat `internal/codex-skills/` as an internal, versioned agent artifact. Never
+  copy it into `content/`, `static/`, `assets/`, or generated site output.
+
 ## Article layout contract
 
 - Treat `layouts/partials/article-nav.html`, `static/article-nav.css`, and
