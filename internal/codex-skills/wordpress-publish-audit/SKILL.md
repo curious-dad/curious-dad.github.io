@@ -78,6 +78,19 @@ Match the existing WordPress opening pattern:
 The `More` block must be top-level and appear immediately after the three-line
 summary. It is required even when the post excerpt field is populated.
 
+When `Continue reading` must land at the beginning of the article instead of
+the continuation point, add an empty `more-<post-id>` anchor as the first node
+in `post_content`:
+
+```html
+<a id="more-123" aria-hidden="true" style="display:block;height:0"></a>
+```
+
+WordPress still generates its continuation anchor after the summary, but the
+browser resolves the first matching target at the top of `.entry-content`.
+Click-test the homepage link at desktop and mobile widths; checking the `href`
+alone does not verify the landing position.
+
 After the marker:
 
 - preserve the complete article;
@@ -110,6 +123,42 @@ replacements across nested `<div>` elements.
 
 Use WordPress XML-RPC when an application password authenticates there but is
 not accepted by the global WordPress.com REST API.
+
+### WordPress.com source-page mirroring
+
+Keep browser work and API work separate:
+
+- use Playwright to browse, compare, screenshot, and measure the public GitHub
+  and WordPress pages;
+- use a dedicated API client for WordPress inventory and XML-RPC reads/writes;
+- never put an application password in a page URL, browser storage, generated
+  article file, or screenshot.
+
+WordPress.com can remove a pasted `<style>` element while leaving its CSS as
+visible article text. Do not publish repository stylesheets inside
+`post_content`. Preserve the source's semantic HTML and translate only the
+needed presentation into narrowly scoped inline styles.
+
+For a source page with a full-width custom hero:
+
+- make the article wrapper `max-width:100%` with visible overflow so it does not
+  clip the full-bleed hero;
+- use `width:100vw`, `max-width:100vw`, and
+  `margin-left:calc(50% - 50vw)` on the hero;
+- set `box-sizing:border-box` and remove inherited hero padding;
+- use `min-height:clamp(560px,47vw,680px)` to match the shared mobile and
+  desktop hero contract without a page-level media query;
+- put the hero image on the hero as an HTTPS `background-image` with
+  `background-size:cover` and `background-position:center`. WordPress themes
+  may constrain an absolutely positioned `<img>` even when it has an inline
+  `width:100%`;
+- use responsive inline grids such as
+  `repeat(auto-fit,minmax(min(260px,100%),1fr))`.
+
+Some source heroes use a CSS background rather than an image element. Resolve
+that asset from the source layout and write its absolute HTTPS URL explicitly;
+otherwise WordPress sanitization can leave a blank hero while preserving the
+overlay text.
 
 ### 6. Verify with Playwright
 
