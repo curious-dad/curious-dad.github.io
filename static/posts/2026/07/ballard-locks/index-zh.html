@@ -12,16 +12,17 @@
 <meta content="assets/images/image-01.jpg" property="og:image"/>
 <meta content="article" property="og:type"/>
 <link href="assets/style.css" rel="stylesheet"/>
+<link href="/article-nav.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="article-site-nav">
-<a class="article-site-brand" href="/" aria-label="Curious Dad 首页">✦</a>
-<nav class="article-site-links" aria-label="网站导航">
-<a href="/">文章</a>
-<a href="/about/">关于</a>
+<header class="article-site-nav">
+<a class="article-site-brand" href="/" aria-label="Curious Dad home"><span class="article-site-mark" aria-hidden="true">✦</span><span>Curious Dad</span></a>
+<button class="article-nav-toggle" type="button" aria-expanded="false" aria-controls="article-nav-links" aria-label="Open navigation"><span></span><span></span><span></span></button>
+<nav class="article-site-links" id="article-nav-links" aria-label="Site navigation">
+<a href="/">Posts</a><a href="/about/">About</a><span class="article-nav-divider" aria-hidden="true"></span><a class="article-language-link" href="./">English</a>
 </nav>
-</div>
-<div class="lang-switch"><a href="./">English →</a></div>
+</header>
+<script src="/article-nav.js" defer></script>
 <header class="hero">
 <div class="hero-bg"></div>
 <div class="hero-overlay"></div>

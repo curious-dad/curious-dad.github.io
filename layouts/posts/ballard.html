@@ -12,16 +12,10 @@
 <meta content="assets/images/image-01.jpg" property="og:image"/>
 <meta content="article" property="og:type"/>
 <link href="assets/style.css" rel="stylesheet"/>
+<link href="{{ "article-nav.css" | relURL }}" rel="stylesheet"/>
 </head>
 <body>
-<div class="article-site-nav">
-<a class="article-site-brand" href="{{ .Site.Home.RelPermalink }}" aria-label="Curious Dad home">✦</a>
-<nav class="article-site-links" aria-label="Site navigation">
-<a href="{{ .Site.Home.RelPermalink }}">Posts</a>
-<a href="{{ "about/" | relURL }}">About</a>
-</nav>
-</div>
-<div class="lang-switch"><a href="index-zh.html">中文 →</a></div>
+{{ partial "article-nav.html" (dict "context" . "languageURL" "index-zh.html" "languageLabel" "中文") }}
 <header class="hero">
 <div class="hero-bg"></div>
 <div class="hero-overlay"></div>

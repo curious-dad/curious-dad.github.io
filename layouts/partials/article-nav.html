@@ -1,0 +1,25 @@
+{{- $context := .context -}}
+{{- $languageURL := .languageURL | default "" -}}
+{{- $languageLabel := .languageLabel | default "" -}}
+<header class="article-site-nav">
+  <a class="article-site-brand" href="{{ $context.Site.Home.RelPermalink }}" aria-label="Curious Dad home">
+    <span class="article-site-mark" aria-hidden="true">✦</span>
+    <span>Curious Dad</span>
+  </a>
+  <button class="article-nav-toggle" type="button" aria-expanded="false" aria-controls="article-nav-links" aria-label="Open navigation">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="article-site-links" id="article-nav-links" aria-label="Site navigation">
+    <a href="{{ $context.Site.Home.RelPermalink }}">Posts</a>
+    <a href="{{ "about/" | relURL }}">About</a>
+    {{- if .inlineLanguageToggle }}
+      <span class="article-nav-divider" aria-hidden="true"></span>
+      <button class="article-language-link" id="btn-zh" type="button" onclick="setLang('zh')">中文</button>
+      <button class="article-language-link active" id="btn-en" type="button" onclick="setLang('en')">English</button>
+    {{- else if $languageURL }}
+      <span class="article-nav-divider" aria-hidden="true"></span>
+      <a class="article-language-link" href="{{ $languageURL }}">{{ $languageLabel }}</a>
+    {{- end }}
+  </nav>
+</header>
+<script src="{{ "article-nav.js" | relURL }}" defer></script>

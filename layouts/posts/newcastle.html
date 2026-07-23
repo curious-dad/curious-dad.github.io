@@ -34,21 +34,6 @@
       font-size: 17px;
     }
 
-    /* ── Language Toggle ── */
-    .lang-toggle {
-      position: fixed; top: 18px; right: 22px; z-index: 1000;
-      display: flex; gap: 6px;
-    }
-    .lang-btn {
-      padding: 6px 16px; border: 2px solid var(--gold);
-      background: rgba(255,255,255,0.92); color: var(--coal);
-      border-radius: 20px; cursor: pointer; font-size: 13px;
-      font-family: inherit; font-weight: 600; transition: all .25s;
-      backdrop-filter: blur(8px);
-    }
-    .lang-btn.active { background: var(--gold); color: #fff; border-color: var(--gold); }
-    .lang-btn:hover:not(.active) { background: var(--warm); }
-
     /* ── Language Visibility ── */
     .zh { display: block; }
     .en { display: none; }
@@ -248,46 +233,17 @@
     .highlight-box p { color: rgba(255,255,255,0.9); margin-bottom: 1em; }
     .highlight-box p:last-child { margin-bottom: 0; }
 
-    /* ── Site Navigation ── */
-    .article-site-nav {
-      position: fixed; top: 18px; left: 20px; z-index: 1000;
-      display: flex; align-items: center; gap: 10px;
-      font-family: 'Helvetica Neue', sans-serif;
-    }
-    .article-site-brand {
-      width: 40px; height: 40px; display: grid; place-items: center;
-      border-radius: 50%; background: #087f5b; color: #fff;
-      text-decoration: none; box-shadow: 0 8px 25px rgba(0,0,0,.2);
-    }
-    .article-site-links {
-      display: flex; padding: 2px 6px; border: 1px solid rgba(255,255,255,.3);
-      border-radius: 999px; background: rgba(20,35,20,.72); backdrop-filter: blur(8px);
-    }
-    .article-site-links a { padding: 6px 9px; color: #e6ede6; font-size: 12px; text-decoration: none; }
-    .article-site-links a:hover { color: var(--gold); }
-
     /* ── Responsive ── */
     @media(max-width:640px){
       .section { padding: 48px 0; }
       .hero { min-height: 0; padding: 108px 0 72px; }
       .hero-title-zh { font-size: 2rem; }
-      .article-site-links { display: none; }
     }
-  </style>
+</style>
+<link href="{{ "article-nav.css" | relURL }}" rel="stylesheet"/>
 </head>
 <body class="show-en">
-<div class="article-site-nav">
-<a class="article-site-brand" href="{{ .Site.Home.RelPermalink }}" aria-label="Curious Dad home">✦</a>
-<nav class="article-site-links" aria-label="Site navigation">
-<a href="{{ .Site.Home.RelPermalink }}">Posts</a>
-<a href="{{ "about/" | relURL }}">About</a>
-</nav>
-</div>
-<!-- Language Toggle -->
-<div class="lang-toggle">
-<button class="lang-btn" id="btn-zh" onclick="setLang('zh')">中文</button>
-<button class="lang-btn active" id="btn-en" onclick="setLang('en')">English</button>
-</div>
+{{ partial "article-nav.html" (dict "context" . "inlineLanguageToggle" true) }}
 <!-- ══════════════════════════════════════════
      HERO
 ══════════════════════════════════════════ -->

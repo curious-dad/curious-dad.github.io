@@ -88,32 +88,24 @@
   .sources li a { color: #5a8aae; text-decoration: none; }
   .sources li a:hover { text-decoration: underline; }
 
-  .lang-switch { position: fixed; top: 20px; right: 20px; z-index: 100; }
-  .lang-switch a { display: inline-block; background: rgba(14,17,23,0.85); border: 1px solid #2a3548; color: #8a9ab5; text-decoration: none; padding: 7px 14px; border-radius: 4px; font-family: sans-serif; font-size: 12px; backdrop-filter: blur(8px); transition: all 0.2s; }
-  .lang-switch a:hover { color: #7ab3d4; border-color: #7ab3d4; }
-  .article-site-nav { position: fixed; top: 20px; left: 20px; z-index: 100; display: flex; align-items: center; gap: 10px; font-family: sans-serif; }
-  .article-site-brand { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; background: #087f5b; color: #fff; text-decoration: none; box-shadow: 0 8px 25px rgba(0,0,0,.28); }
-  .article-site-links { display: flex; padding: 2px 6px; border: 1px solid #2a3548; border-radius: 999px; background: rgba(14,17,23,.88); backdrop-filter: blur(8px); }
-  .article-site-links a { padding: 6px 9px; color: #8a9ab5; font-size: 12px; text-decoration: none; }
-  .article-site-links a:hover { color: #7ab3d4; }
   @media(max-width:600px) {
     .hero { min-height: 0; padding: 110px 0 64px; }
     .hero-tag { margin-bottom: 20px; }
     .hero-sub { margin-bottom: 18px; }
-    .article-site-links { display: none; }
     section { padding: 62px 0; }
   }
 </style>
+<link href="/article-nav.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="article-site-nav">
-<a class="article-site-brand" href="/" aria-label="Curious Dad home">✦</a>
-  <nav class="article-site-links" aria-label="Site navigation">
-<a href="/">Posts</a>
-<a href="/about/">About</a>
-  </nav>
-</div>
-<div class="lang-switch"><a href="index.html">English →</a></div>
+<header class="article-site-nav">
+<a class="article-site-brand" href="/" aria-label="Curious Dad home"><span class="article-site-mark" aria-hidden="true">✦</span><span>Curious Dad</span></a>
+<button class="article-nav-toggle" type="button" aria-expanded="false" aria-controls="article-nav-links" aria-label="Open navigation"><span></span><span></span><span></span></button>
+<nav class="article-site-links" id="article-nav-links" aria-label="Site navigation">
+<a href="/">Posts</a><a href="/about/">About</a><span class="article-nav-divider" aria-hidden="true"></span><a class="article-language-link" href="index.html">English</a>
+</nav>
+</header>
+<script src="/article-nav.js" defer></script>
 <div class="hero">
 <div class="hero-bg"></div>
 <div class="hero-overlay"></div>

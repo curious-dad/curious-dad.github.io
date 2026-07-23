@@ -13,3 +13,4 @@
 </script>
 {{ $css := resources.Get "css/site.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+<link rel="stylesheet" href="{{ "article-nav.css" | relURL }}">

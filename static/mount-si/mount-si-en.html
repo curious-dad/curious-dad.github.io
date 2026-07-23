@@ -46,30 +46,23 @@ p a.src:hover { text-decoration: underline; }
 .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 2rem 0 0; }
 .tag { background: var(--tag-bg); color: var(--tag-text); font-family: 'Helvetica Neue', sans-serif; font-size: 0.76rem; padding: 0.28rem 0.7rem; border-radius: 20px; font-weight: 600; }
 .article-footer { background: #F0F0EB; border-top: 1px solid var(--border); padding: 2rem 0; font-family: 'Helvetica Neue', sans-serif; font-size: 0.8rem; color: var(--stone); text-align: center; line-height: 1.7; }
-.lang-bar { background: var(--forest); padding: 0.6rem 1.5rem; text-align: right; }
-.lang-bar a { color: rgba(255,255,255,0.75); font-family: 'Helvetica Neue', sans-serif; font-size: 0.78rem; text-decoration: none; margin-left: 1rem; }
-.lang-bar a:hover { color: #fff; }
-.lang-bar a.active { color: #fff; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.5); }
-.site-banner { background: var(--forest); border-bottom: 1px solid rgba(255,255,255,0.18); display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.65rem 1.5rem; }
-.site-banner a { color: rgba(255,255,255,0.86); font-family: 'Helvetica Neue', sans-serif; font-size: 0.8rem; text-decoration: none; }
-.site-banner .site-brand { color: #fff; font-weight: 700; letter-spacing: 0.02em; }
-.site-banner a:hover { color: #fff; }
 @media (max-width: 600px) {
   .img-duo { grid-template-columns: 1fr; }
   h2 { font-size: 1.35rem; }
   body { font-size: 16px; }
 }
 </style>
+<link href="/article-nav.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="site-banner">
-<a class="site-brand" href="/" aria-label="Curious Dad home">✦ Curious Dad</a>
-<a href="/">← Back to the journal</a>
-</div>
-<div class="lang-bar">
-<a href="mount-si-zh.html">中文</a>
-<a class="active" href="mount-si-en.html">English</a>
-</div>
+<header class="article-site-nav">
+<a class="article-site-brand" href="/" aria-label="Curious Dad home"><span class="article-site-mark" aria-hidden="true">✦</span><span>Curious Dad</span></a>
+<button class="article-nav-toggle" type="button" aria-expanded="false" aria-controls="article-nav-links" aria-label="Open navigation"><span></span><span></span><span></span></button>
+<nav class="article-site-links" id="article-nav-links" aria-label="Site navigation">
+<a href="/">Posts</a><a href="/about/">About</a><span class="article-nav-divider" aria-hidden="true"></span><a class="article-language-link" href="mount-si-zh.html">中文</a>
+</nav>
+</header>
+<script src="/article-nav.js" defer></script>
 <div class="hero">
 <img alt="Mount Si panorama, North Bend, Washington State" class="hero-bg" src="images/hero_mount_si.jpg"/>
 <div class="hero-overlay">
