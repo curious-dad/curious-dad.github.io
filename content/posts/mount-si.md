@@ -6,4 +6,7 @@ tags: ["nature", "history", "Washington", "hiking", "Pacific Northwest"]
 cover: "/mount-si/images/hero_mount_si.jpg"
 readingTime: 6
 externalURL: "/mount-si/mount-si-en.html"
+build:
+  render: never
+  list: always
 ---
