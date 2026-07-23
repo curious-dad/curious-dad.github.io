@@ -9,12 +9,12 @@
       {{ $post := . }}
       <article class="post-card">
         {{ with .Params.cover }}
-          <a class="post-cover" href="{{ $post.RelPermalink }}" tabindex="-1" aria-hidden="true">
+          <a class="post-cover" href="{{ $post.Params.externalURL | default $post.RelPermalink }}" tabindex="-1" aria-hidden="true">
             <img src="{{ strings.TrimPrefix "/" . | relURL }}" alt="" loading="lazy">
           </a>
         {{ end }}
         <div class="post-card-body">
-          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <h2><a href="{{ .Params.externalURL | default .RelPermalink }}">{{ .Title }}</a></h2>
           <p class="post-summary">{{ .Description | default .Summary | plainify | truncate 220 }}</p>
           {{ with .Params.tags }}
             <ul class="tag-list" aria-label="Tags">

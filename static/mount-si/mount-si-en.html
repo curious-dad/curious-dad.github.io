@@ -50,6 +50,10 @@ p a.src:hover { text-decoration: underline; }
 .lang-bar a { color: rgba(255,255,255,0.75); font-family: 'Helvetica Neue', sans-serif; font-size: 0.78rem; text-decoration: none; margin-left: 1rem; }
 .lang-bar a:hover { color: #fff; }
 .lang-bar a.active { color: #fff; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.5); }
+.site-banner { background: var(--forest); border-bottom: 1px solid rgba(255,255,255,0.18); display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.65rem 1.5rem; }
+.site-banner a { color: rgba(255,255,255,0.86); font-family: 'Helvetica Neue', sans-serif; font-size: 0.8rem; text-decoration: none; }
+.site-banner .site-brand { color: #fff; font-weight: 700; letter-spacing: 0.02em; }
+.site-banner a:hover { color: #fff; }
 @media (max-width: 600px) {
   .img-duo { grid-template-columns: 1fr; }
   h2 { font-size: 1.35rem; }
@@ -58,6 +62,10 @@ p a.src:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
+<div class="site-banner">
+<a class="site-brand" href="/" aria-label="Curious Dad home">✦ Curious Dad</a>
+<a href="/">← Back to the journal</a>
+</div>
 <div class="lang-bar">
 <a href="mount-si-zh.html">中文</a>
 <a class="active" href="mount-si-en.html">English</a>
