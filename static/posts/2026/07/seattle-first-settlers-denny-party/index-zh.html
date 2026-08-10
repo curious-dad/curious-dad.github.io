@@ -31,12 +31,12 @@
 <link rel="stylesheet" href="/article-nav.css">
 <style>
   body { max-width: none; margin: 0; padding: 0; }
-  .article-content { max-width: 860px; margin: 0 auto; padding: 56px 32px 60px; }
-  .settlers-hero { position: relative; overflow: hidden; text-align: center; color: #fff; background: linear-gradient(135deg, rgba(29, 45, 33, .87), rgba(67, 37, 16, .75)), url('hero.jpg') center/cover no-repeat; }
-  .settlers-hero__content { position: relative; z-index: 1; max-width: 900px; padding: 32px 24px; }
+  .article-content { max-width: 860px; margin: 0 auto; padding: 56px 32px 60px; overflow-wrap: anywhere; }
+  .settlers-hero { position: relative; display: flex; justify-content: center; overflow: hidden; text-align: center; color: #fff; background: linear-gradient(135deg, rgba(29, 45, 33, .87), rgba(67, 37, 16, .75)), url('hero.jpg') center/cover no-repeat; }
+  .settlers-hero__content { position: relative; z-index: 1; width: 100%; max-width: 900px; padding: 32px 24px; }
   .settlers-hero h1 { border: 0; padding: 0; color: #fff; font-size: clamp(2.25rem, 5vw, 4.25rem); line-height: 1.18; margin: 0; text-shadow: 0 2px 18px rgba(0,0,0,.45); }
   .settlers-hero p { margin: 18px 0 0; font-size: clamp(1rem, 2vw, 1.25rem); color: rgba(255,255,255,.9); font-style: italic; }
-  @media (max-width: 640px) { .article-content { padding: 40px 16px 48px; } }
+  @media (max-width: 640px) { .article-content { padding: 40px 16px 48px; } .article-content table { display: block; max-width: 100%; overflow-x: auto; } }
 </style>
 </head>
 <body>
