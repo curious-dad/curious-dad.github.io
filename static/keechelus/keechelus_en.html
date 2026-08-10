@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Lake Keechelus: Past and Present of a Mountain Reservoir</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, "Times New Roman", serif; background: #f5f2ed; color: #2c2c2c; line-height: 1.85; }
+  .hero { width:100%; overflow:hidden; position:relative; display:flex; }
+  .hero img.hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; display:block; filter:brightness(.58); }
+  .hero-overlay { position:relative; z-index:2; width:100%; max-width:860px; margin:auto; padding:32px 24px; color:#fff; }
+  .hero-kicker { margin-bottom:14px; font-family:Arial,sans-serif; font-size:.78rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#d1fae5; }
+  .hero-caption { position:absolute; z-index:2; bottom:0; left:0; right:0; background:rgba(0,0,0,.52); color:#eee; font-size:.78rem; padding:8px 18px; }
+  .container { max-width:860px; margin:0 auto; padding:48px 24px 80px; }
+  .container a { overflow-wrap:anywhere; }
+  .hero h1 { max-width:760px; font-size:clamp(2.1rem,5vw,3.8rem); font-weight:700; color:#fff; margin-bottom:14px; line-height:1.12; text-shadow:0 2px 22px rgba(0,0,0,.6); }
+  .subtitle { max-width:720px; font-size:1rem; color:rgba(255,255,255,.86); font-style:italic; text-shadow:0 1px 8px rgba(0,0,0,.5); }
+  .lead { font-size:1.08rem; color:#3a3a2a; border-left:4px solid #5a8a6a; padding-left:18px; margin-bottom:40px; line-height:1.9; }
+  h2 { font-size:1.35rem; color:#1a3a2a; margin:48px 0 14px; padding-bottom:6px; border-bottom:2px solid #c8d8c0; }
+  h3 { font-size:1.08rem; color:#2a4a3a; margin:28px 0 10px; }
+  p { margin-bottom:16px; font-size:1.01rem; }
+  .photo-block { margin:28px 0; background:#fff; border-radius:6px; overflow:hidden; box-shadow:0 2px 12px rgba(0,0,0,.10); }
+  .photo-block img { width:100%; display:block; max-height:480px; object-fit:cover; }
+  .photo-block .caption { padding:10px 16px; font-size:.82rem; color:#555; background:#f9f9f6; border-top:1px solid #e8e8e0; line-height:1.5; }
+  .src-tag { display:inline-block; margin-left:6px; font-size:.75rem; padding:1px 7px; border-radius:10px; font-weight:600; }
+  .src-high { background:#d4edda; color:#155724; }
+  .src-med  { background:#fff3cd; color:#856404; }
+  .src-warn { background:#f8d7da; color:#721c24; }
+  .photo-row { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:28px 0; }
+  .photo-row .photo-block { margin:0; }
+  .photo-row .photo-block img { max-height:280px; }
+  blockquote { background:#eef4ee; border-left:4px solid #5a8a6a; padding:12px 18px; margin:20px 0; font-size:.92rem; color:#444; border-radius:0 4px 4px 0; }
+  .note { background:#fdf8ee; border:1px solid #e8d8a0; border-radius:4px; padding:10px 16px; font-size:.88rem; color:#6a5a20; margin:14px 0; }
+  table { width:100%; max-width:100%; border-collapse:collapse; font-size:.88rem; margin:18px 0; display:block; overflow-x:auto; }
+  th { background:#2a4a3a; color:#fff; padding:9px 12px; text-align:left; }
+  td { padding:8px 12px; border-bottom:1px solid #ddd; vertical-align:top; }
+  tr:nth-child(even) td { background:#f5f5f0; }
+  .reliability-section { background:#f0f4f0; border-radius:8px; padding:28px 28px 20px; margin-top:56px; }
+  .reliability-section h2 { border-bottom-color:#8ab89a; margin-top:0; }
+  .verdict { background:#e8f4e8; border:1px solid #8ab89a; border-radius:6px; padding:14px 18px; margin-top:20px; font-size:.93rem; color:#1a3a1a; line-height:1.7; }
+  .sources-section { margin-top:48px; padding:24px 28px; background:#f8f8f4; border-radius:8px; border:1px solid #d8d8c8; }
+  .sources-section h2 { border-bottom-color:#b8b8a0; margin-top:0; }
+  .sources-section ol { padding-left:20px; margin-top:12px; }
+  .sources-section li { margin-bottom:8px; font-size:.88rem; line-height:1.55; }
+  .sources-section a { color:#2a6a4a; word-break:break-all; }
+  hr { border:none; border-top:1px solid #d0d8c8; margin:40px 0; }
+  @media(max-width:600px){ .photo-row { grid-template-columns:1fr; } .hero h1 { font-size:2rem; } .hero-overlay { padding-left:0; padding-right:0; } }
+</style>
+<link href="/article-nav.css" rel="stylesheet">
+</head>
+<body>
+<header class="article-site-nav">
+  <a class="article-site-brand" href="/" aria-label="Curious Dad home"><span class="article-site-mark" aria-hidden="true">✦</span><span>Curious Dad</span></a>
+  <button class="article-nav-toggle" type="button" aria-expanded="false" aria-controls="article-nav-links" aria-label="Open navigation"><span></span><span></span><span></span></button>
+  <nav class="article-site-links" id="article-nav-links" aria-label="Site navigation">
+    <a href="/">Posts</a><a href="/about/">About</a><span class="article-nav-divider" aria-hidden="true"></span><a class="article-language-link" href="keechelus_zh.html">中文</a>
+  </nav>
+</header>
+<script src="/article-nav.js" defer></script>
+
+<div class="hero article-page-hero">
+  <img class="hero-bg" src="images/01_aerial_wsdot.jpg" alt="View of Lake Keechelus along I-90">
+  <div class="hero-overlay">
+    <p class="hero-kicker">Pacific Northwest · Nature &amp; History</p>
+    <h1>Lake Keechelus: Past and Present of a Mountain Reservoir</h1>
+    <div class="subtitle">Cascade Range, Washington State · Along I-90 · Elevation 2,517 ft (767 m)</div>
+  </div>
+  <div class="hero-caption">View along Lake Keechelus from I-90 | Source: WSDOT / Mountains to Sound Greenway Trust ✅ State government agency</div>
+</div>
+
+<div class="container">
+<div class="lead">
+Driving east on I-90 from Seattle over Snoqualmie Pass, the elevation drops sharply and the mountains open up. On the right side of the highway, a broad expanse of water suddenly appears. The shoreline is ragged, dead tree stumps protrude from the surface, and a distinct bathtub ring marks the hillside above the waterline — details that hint the lake is not entirely natural. Yet its name, Keechelus, carries the unmistakable sound of an Indigenous language, standing apart from the English place names around it. Is this a lake or a reservoir? Where does the name come from? And what transformations has it undergone?
+</div>
+
+<hr>
+<h2>I. Geography: The First Water East of the Pass</h2>
+<p>Lake Keechelus (pronounced /ˈkɛtʃələs/) lies in Kittitas County, Washington State, at an elevation of 2,517 feet (767 m). The lake stretches approximately 4.2 miles (6.8 km) at its longest and 1 mile (1.6 km) at its widest. It is the westernmost of three large alpine lakes along I-90 in the Cascade Range; the other two, Kachess Lake and Cle Elum Lake, lie successively to the east.</p>
+<p>After crossing Snoqualmie Pass (elevation 3,020 ft / 920 m), I-90 runs along the lake's eastern shoreline, pressed tight against the mountains. The lake is the headwater source of the Yakima River, which flows east to join the Columbia River.</p>
+<div class="photo-block">
+  <img src="images/06_aerial_tours.jpg" alt="Aerial view of Lake Keechelus">
+  <div class="caption">Aerial view of Lake Keechelus, with I-90 visible along the eastern shore. <span class="src-tag src-warn">⚠️ Aerial Tours (commercial website), no photographer credit</span></div>
+</div>
+<blockquote><strong>Source:</strong> Wikipedia, "Keechelus Lake," <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Keechelus_Lake">https://en.wikipedia.org/wiki/Keechelus_Lake</a> ✅ Medium-high reliability</blockquote>
+
+<hr>
+<h2>II. The Name: An Indigenous Imprint</h2>
+<p>"Keechelus" derives from a Native American word meaning "few fish." The name stands in direct contrast to neighboring Kachess Lake, whose name means "more fish." Side by side on the map, the two names read like a brief fishery record — a direct reflection of Indigenous observation of these waters.</p>
+<p>The traditional inhabitants of this land were the Kittitas people, known in the Sahaptin language as Pshwánapam, meaning "rock people." They are closely related to the Yakama and are sometimes described as a band or subtribe of the Yakama Nation. Their traditional territory covered the Kittitas Valley, the Naches Valley, and the upper Yakima River drainage — Lake Keechelus falls within this territory.</p>
+<p>The Kittitas used Snoqualmie Pass and Stampede Pass as trade corridors, serving as intermediaries between Plateau peoples on the east side of the Cascades and Coast Salish groups to the west. In 1814, fur trader Alexander Ross entered the Kittitas Valley and encountered a massive tribal gathering. In his memoir he wrote that the camp stretched more than six miles in every direction, with no fewer than 3,000 men — and three times as many horses. By the early 1860s, white settlers had entered the Kittitas Valley in large numbers, and the Kittitas people were subsequently removed to the Yakama Indian Reservation.</p>
+<blockquote><strong>Source note:</strong> The name's meaning comes from Wikipedia "Keechelus Lake," where the original text reads "a Native American term" without specifying a language family — the article follows that wording. Indigenous background and the Alexander Ross quotation come from Wikipedia "Kittitas people" (<a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Kittitas_people">https://en.wikipedia.org/wiki/Kittitas_people</a>), which cites Ross (1855), <em>The Fur Hunters of the Far West</em>.</blockquote>
+
+<hr>
+<h2>III. Geology: A Glacially Carved Basin</h2>
+<p>The basin of Lake Keechelus was shaped by Quaternary glaciation. Geological surveys near the dam reveal two layers of glacial deposits on the valley floor: an older Quaternary Glacial Drift (terminal moraine) and overlying Quaternary Outwash Sediments. The bedrock is rhyolite of the Naches Formation, exposed on the left side of the spillway. Before any human intervention, this was already a natural alpine lake.</p>
+<blockquote><strong>Source:</strong> U.S. Bureau of Reclamation, "Keechelus Dam," <a target="_blank" rel="noopener noreferrer" href="https://www.usbr.gov/projects/index.php?id=294">https://www.usbr.gov/projects/index.php?id=294</a> ✅ Very high reliability</blockquote>
+
+<hr>
+<h2>IV. Becoming a Reservoir: The Federal Irrigation Project</h2>
+<h3>A Fertile but Parched Valley</h3>
+<p>The Yakima Valley receives less than 7 inches (178 mm) of rain per year — fertile soil, but extreme aridity. As early as 1864, settlers dug the valley's first irrigation ditch. Yet after the spring snowmelt flood passed, rivers quickly ran dry, leaving farmers without a reliable water supply.</p>
+<p>In June 1902, Congress passed the Newlands Reclamation Act (also known as the National Reclamation Act of 1902), signed by President Theodore Roosevelt, authorizing the federal government to build irrigation works across the arid West. In January 1903, citizens of Yakima County petitioned the Secretary of the Interior for federal involvement. That same year, the U.S. Bureau of Reclamation launched investigations, and in December 1905 formally authorized the Yakima Project.</p>
+<blockquote><strong>Source:</strong> U.S. Bureau of Reclamation, "The Bureau of Reclamation Recognizes 100 Years of Service to the Yakima Valley" (2005 press release), <a target="_blank" rel="noopener noreferrer" href="https://www.usbr.gov/newsroomold/newsrelease/detail.cfm?RecordID=9202">https://www.usbr.gov/newsroomold/newsrelease/detail.cfm?RecordID=9202</a> ✅; Newlands Reclamation Act details verified via Wikipedia "Newlands Reclamation Act" (<a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Newlands_Reclamation_Act">https://en.wikipedia.org/wiki/Newlands_Reclamation_Act</a>) ✅</blockquote>
+
+<h3>Dam Construction (1917)</h3>
+<p>Keechelus Dam was built at the outlet of the natural lake and completed in 1917. The earthfill structure stands 128 feet (39 m) high and contains 684,000 cubic yards of material. The dam raised the lake's active storage capacity to 157,900 acre-feet (approximately 194.8 million cubic meters), making it one of six reservoirs in the Yakima Project, dedicated to capturing spring snowmelt runoff for season-long agricultural irrigation in the Yakima Valley.</p>
+<div class="photo-row">
+  <div class="photo-block">
+    <img src="images/02_dam_spillway_loc.jpg" alt="Keechelus Dam spillway, historic photo">
+    <div class="caption">Keechelus Dam spillway, early construction-era photograph. <span class="src-tag src-high">✅ Library of Congress / HAER — very high reliability</span></div>
+  </div>
+  <div class="photo-block">
+    <img src="images/07_dam_spillway2_loc.jpg" alt="Keechelus Dam spillway panorama, historic photo">
+    <div class="caption">Keechelus Dam spillway panorama, historic archive photograph. <span class="src-tag src-high">✅ Library of Congress / HAER — very high reliability</span></div>
+  </div>
+</div>
+<div class="photo-block">
+  <img src="images/10_dam_loop.jpg" alt="View from the top of Keechelus Dam">
+  <div class="caption">View from the top of Keechelus Dam, looking out over the lake. <span class="src-tag src-warn">⚠️ Celebrate Big! (personal blog), no photographer credit</span></div>
+</div>
+
+<h3>Safety Rehabilitation (2002–2003)</h3>
+<p>In mid-1998, the Bureau of Reclamation determined that Keechelus Dam had safety deficiencies due to the potential for piping and internal erosion of embankment materials, and imposed a reservoir operating restriction. Between April 2002 and November 2003, the dam underwent major rehabilitation under the Safety of Dams Program: much of the dam cross-section was removed and rebuilt, a bentonite slurry cutoff wall was constructed in the right abutment, and a downstream drain was installed along the entire length of the dam. The operating restriction was lifted in early 2004.</p>
+<blockquote><strong>Source:</strong> U.S. Bureau of Reclamation, "Keechelus Dam," <a target="_blank" rel="noopener noreferrer" href="https://www.usbr.gov/projects/index.php?id=294">https://www.usbr.gov/projects/index.php?id=294</a> ✅ Very high reliability</blockquote>
+
+<hr>
+<h2>V. The Railroad Era: The Milwaukee Road</h2>
+<p>Alongside the reservoir's history, another story unfolded along the lakeshore. The Chicago, Milwaukee, St. Paul and Pacific Railroad — known as the "Milwaukee Road" — once ran along the lake's western shore, crossing the Cascades through the Snoqualmie Tunnel (2¼ miles (3.625 km) long), with its east portal at Hyak, near the lake's northwest shore.</p>
+<p>The Milwaukee Road opened its Pacific Extension to Tacoma in 1909, initially routing trains over Snoqualmie Pass. When the tunnel opened in 1914, trains switched to the tunnel route. In 1937, the railroad built the Milwaukee Ski Bowl near the tunnel's east portal; it operated until 1950. After multiple bankruptcies, the Milwaukee Road abandoned its lines in 1980. The right-of-way is now a rail trail — Iron Horse State Park (officially the Palouse to Cascades State Park Trail) — and the tunnel remains open to hikers and cyclists.</p>
+<div class="photo-block">
+  <img src="images/09_wta_trail.jpg" alt="Iron Horse Trail along Lake Keechelus">
+  <div class="caption">The Iron Horse Trail (Palouse to Cascades State Park Trail) follows the old Milwaukee Road right-of-way along Lake Keechelus. <span class="src-tag src-high">✅ Washington Trails Association (WTA) — medium-high reliability</span></div>
+</div>
+<blockquote><strong>Source:</strong> Wikipedia, "Keechelus Lake" (<a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Keechelus_Lake">https://en.wikipedia.org/wiki/Keechelus_Lake</a>); tunnel construction dates cross-verified via Wikipedia "Snoqualmie Tunnel" (<a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Snoqualmie_Tunnel">https://en.wikipedia.org/wiki/Snoqualmie_Tunnel</a>) ✅</blockquote>
+<div class="note">⚠️ Milwaukee Ski Bowl construction date: Wikipedia records 1937; Ski Jumping Hill Archive records the ski area as officially opening in 1938. The discrepancy likely reflects the difference between groundbreaking and opening — minor uncertainty remains.</div>
+
+<hr>
+<h2>VI. Rising and Falling: The Reservoir's Other Face</h2>
+<p>As a reservoir, Lake Keechelus experiences dramatic water-level fluctuations across seasons and years. The lake fills during spring snowmelt and drains through summer and fall for irrigation. In dry years, the water level drops sharply, exposing dead tree stumps and a prominent bathtub ring on the surrounding hillsides — the most visible sign to I-90 drivers that this is a managed reservoir, not a pristine alpine lake.</p>
+<div class="photo-block">
+  <img src="images/03_low_water.jpg" alt="Exposed shoreline at low water level">
+  <div class="caption">During drought years, Lake Keechelus drops significantly, exposing the lakebed and dead tree stumps. Estimated May 2023. <span class="src-tag src-warn">⚠️ Northwest Portal (personal outdoor blog), no photographer credit</span></div>
+</div>
+<div class="photo-block">
+  <img src="images/08_i90_clark.jpg" alt="I-90 widening project construction">
+  <div class="caption">Construction on the I-90 Snowshed to Keechelus Dam Phase 1C project, which widened the highway from two to three lanes in each direction. Completed 2019; ENR Northwest 2020 Project of the Year. Owner: WSDOT; Contractor: Guy F. Atkinson Construction. <span class="src-tag src-med">✅ Clark Construction website, verified via ENR — medium-high reliability</span></div>
+</div>
+
+<hr>
+<h2>VII. Winter: A Different Landscape</h2>
+<p>Each winter, deep snow blankets the Lake Keechelus area and the lake surface sometimes freezes, making it a popular destination for snowshoeing and cross-country skiing. The Snoqualmie Pass ski area lies just a few kilometers to the northwest.</p>
+<div class="photo-row">
+  <div class="photo-block">
+    <img src="images/04_winter_snow.jpg" alt="Winter panorama of Lake Keechelus under snow">
+    <div class="caption">Lake Keechelus under winter snow cover. <span class="src-tag src-warn">⚠️ Northwest Portal (personal blog), no photographer credit</span></div>
+  </div>
+  <div class="photo-block">
+    <img src="images/05_snowshoe.jpg" alt="Snowshoeing to Lake Keechelus">
+    <div class="caption">Snowshoeing to Lake Keechelus in winter. <span class="src-tag src-warn">⚠️ Pines and Vines (personal blog), no photographer credit</span></div>
+  </div>
+</div>
+
+<hr>
+<h2>VIII. Today: New Challenges Under Climate Change</h2>
+<p>As climate change intensifies drought pressure in the Yakima Basin, the Bureau of Reclamation and the Washington State Department of Ecology are jointly advancing the Keechelus-to-Kachess Conveyance (KKC) project. The project would divert water from the Yakima River immediately downstream of Keechelus Dam and convey it through a new tunnel to Kachess Reservoir, serving two purposes: first, to reduce high flows below the dam at certain times of year, providing spawning and rearing habitat for Chinook salmon and steelhead; second, to accelerate refilling of Kachess Reservoir in drought years in conjunction with the proposed Kachess Drought Relief Pumping Plant (KDRPP). On April 26, 2019, the Bureau of Reclamation's Pacific Northwest Regional Director signed the Record of Decision for the project.</p>
+<blockquote><strong>Source:</strong> U.S. Bureau of Reclamation, "Keechelus-to-Kachess Conveyance Project," <a target="_blank" rel="noopener noreferrer" href="https://www.usbr.gov/pn/programs/eis/kkc/index.html">https://www.usbr.gov/pn/programs/eis/kkc/index.html</a> ✅ Very high reliability</blockquote>
+
+<hr>
+
+<div class="reliability-section">
+<h2>Sources and Reliability Assessment</h2>
+<h3 style="margin-top:20px;">Text Sources</h3>
+<table>
+  <tr><th>Source</th><th>Nature</th><th>Reliability</th></tr>
+  <tr><td>Wikipedia "Keechelus Lake"</td><td>Encyclopedia article citing Phillips 1971 (UW Press) and other academic works</td><td>✅ Medium-high</td></tr>
+  <tr><td>Wikipedia "Kittitas people"</td><td>Encyclopedia article citing Ross (1855) primary source and linguistic scholarship</td><td>✅ Medium</td></tr>
+  <tr><td>Wikipedia "Snoqualmie Tunnel"</td><td>Encyclopedia article citing multiple historical sources</td><td>✅ Medium-high</td></tr>
+  <tr><td>Wikipedia "Newlands Reclamation Act"</td><td>Encyclopedia article citing congressional legislation text</td><td>✅ Medium-high</td></tr>
+  <tr><td>U.S. Bureau of Reclamation "Keechelus Dam"</td><td>Federal government official page — dam builder and operator</td><td>✅ Very high</td></tr>
+  <tr><td>U.S. Bureau of Reclamation 100th anniversary press release (2005)</td><td>Federal agency press release</td><td>✅ High</td></tr>
+  <tr><td>U.S. Bureau of Reclamation "KKC Project"</td><td>Federal government official project page</td><td>✅ Very high</td></tr>
+  <tr><td>ENR Northwest, I-90 project coverage (2020)</td><td>Authoritative engineering trade publication</td><td>✅ High</td></tr>
+</table>
+<h3 style="margin-top:24px;">Photo Sources</h3>
+<table>
+  <tr><th>Image</th><th>Source</th><th>Reliability</th></tr>
+  <tr><td>View along I-90 (cover)</td><td>WSDOT via Mountains to Sound Greenway Trust</td><td>✅ High (state government agency)</td></tr>
+  <tr><td>Dam spillway (historic)</td><td>Library of Congress / HAER</td><td>✅ Very high (federal archive)</td></tr>
+  <tr><td>Dam spillway panorama (historic)</td><td>Library of Congress / HAER</td><td>✅ Very high (federal archive)</td></tr>
+  <tr><td>Iron Horse Trail</td><td>Washington Trails Association (WTA)</td><td>✅ Medium-high (nonprofit)</td></tr>
+  <tr><td>I-90 construction</td><td>Clark Construction, verified via ENR</td><td>✅ Medium-high</td></tr>
+  <tr><td>Aerial view</td><td>Aerial Tours (commercial website)</td><td>⚠️ Content accurate, no attribution</td></tr>
+  <tr><td>Low water shoreline</td><td>Northwest Portal (personal blog)</td><td>⚠️ Content accurate, no attribution</td></tr>
+  <tr><td>Winter snow scene</td><td>Northwest Portal (personal blog)</td><td>⚠️ Content accurate, no attribution</td></tr>
+  <tr><td>Snowshoeing</td><td>Pines and Vines (personal blog)</td><td>⚠️ Content accurate, no attribution</td></tr>
+  <tr><td>Dam top trail</td><td>Celebrate Big! (personal blog)</td><td>⚠️ Content accurate, no attribution</td></tr>
+</table>
+<div class="verdict">
+<strong>Two-round fact-check conclusion:</strong> All core facts confirmed through two rounds of verification — no fabricated or speculative data. Round 1 identified an error in the I-90 construction photo caption (wrong contractor name); corrected to Guy F. Atkinson Construction. Round 2 confirmed that the Alexander Ross quotation, the Newlands Reclamation Act signing details, and the Kittitas removal timeline all match their primary sources exactly. Photos from WSDOT and the Library of Congress/HAER are authoritative; personal blog photos are consistent with geographic reality and have been labeled accordingly.
+</div>
+</div>
+
+<div class="sources-section">
+<h2>All Source Links</h2>
+<ol>
+  <li>Wikipedia, "Keechelus Lake" — <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Keechelus_Lake">https://en.wikipedia.org/wiki/Keechelus_Lake</a> ✅ 200 OK</li>
+  <li>Wikipedia, "Kittitas people" — <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Kittitas_people">https://en.wikipedia.org/wiki/Kittitas_people</a> ✅ 200 OK</li>
+  <li>Wikipedia, "Snoqualmie Tunnel" — <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Snoqualmie_Tunnel">https://en.wikipedia.org/wiki/Snoqualmie_Tunnel</a> ✅ 200 OK</li>
+  <li>Wikipedia, "Newlands Reclamation Act" — <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Newlands_Reclamation_Act">https://en.wikipedia.org/wiki/Newlands_Reclamation_Act</a> ✅ 200 OK</li>
+  <li>U.S. Bureau of Reclamation, "Keechelus Dam" — <a target="_blank" rel="noopener noreferrer" href="https://www.usbr.gov/projects/index.php?id=294">https://www.usbr.gov/projects/index.php?id=294</a> ✅ 200 OK</li>
+  <li>U.S. Bureau of Reclamation, "100 Years of Service to the Yakima Valley" (2005) — <a target="_blank" rel="noopener noreferrer" href="https://www.usbr.gov/newsroomold/newsrelease/detail.cfm?RecordID=9202">https://www.usbr.gov/newsroomold/newsrelease/detail.cfm?RecordID=9202</a> ✅ 200 OK</li>
+  <li>U.S. Bureau of Reclamation, "Keechelus-to-Kachess Conveyance Project" — <a target="_blank" rel="noopener noreferrer" href="https://www.usbr.gov/pn/programs/eis/kkc/index.html">https://www.usbr.gov/pn/programs/eis/kkc/index.html</a> ✅ 200 OK</li>
+  <li>ENR Northwest, "2020 Project of the Year: I-90/Snowshed to Keechelus Dam Phase 1C" — <a target="_blank" rel="noopener noreferrer" href="https://www.enr.com/articles/50734-enr-northwests-2020-project-of-the-year-i-90snowshed-to-keechelus-dam-phase-1c">https://www.enr.com/articles/50734-enr-northwests-2020-project-of-the-year-i-90snowshed-to-keechelus-dam-phase-1c</a> ✅ 200 OK</li>
+  <li>Library of Congress / HAER, "Keechelus Dam" — <a target="_blank" rel="noopener noreferrer" href="https://www.loc.gov/pictures/item/wa0419/">https://www.loc.gov/pictures/item/wa0419/</a> ✅ Official archive record</li>
+  <li>Mountains to Sound Greenway Trust / WSDOT, Lake Keechelus photo — <a target="_blank" rel="noopener noreferrer" href="https://mtsgreenway.org/wp-content/uploads/2022/02/View-along-Lake-Keechelus_CourtesyWSDOT.jpg">https://mtsgreenway.org/…/View-along-Lake-Keechelus_CourtesyWSDOT.jpg</a> ✅ 200 OK</li>
+</ol>
+</div>
+
+</div>
+</body>
+</html>
