@@ -109,6 +109,17 @@ button, input { font: inherit; }
 .article-content img { max-width: 100%; border-radius: .55rem; }
 .article-footer { padding: 1.25rem 2rem; border-top: 1px solid var(--line); }
 .text-link { color: var(--accent); font-weight: 700; text-decoration: none; }
+.comic-article { max-width: 980px; margin: 1.15rem auto 0; overflow: hidden; border: 1px solid #dfc9a7; border-radius: .85rem; background: #fffaf0; color: #49392d; box-shadow: var(--shadow); }
+.comic-header { padding: 2.3rem 1.5rem 1.7rem; background: #f5ead7; text-align: center; }
+.comic-kicker { margin: 0 0 .45rem; color: #a56f45; font-size: .72rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.comic-header h1 { margin: 0; color: #754d2e; font-size: clamp(2.1rem, 5vw, 3.1rem); line-height: 1.13; letter-spacing: -.04em; }
+.comic-dek { margin: .75rem auto 0; color: #806b58; font-size: 1.05rem; }
+.comic-panels { padding: 1.6rem; }
+.comic-panel { margin: 0 0 1.7rem; overflow: hidden; border: 1px solid #dfc9a7; border-radius: .75rem; background: #fffaf0; box-shadow: 0 4px 16px rgba(128, 96, 60, .13); }
+.comic-panel:last-child { margin-bottom: 0; }
+.comic-panel img { display: block; width: 100%; height: auto; }
+.comic-panel figcaption { padding: 1rem 1.25rem 1.15rem; color: #583c29; font-size: clamp(1rem, 2.4vw, 1.3rem); font-weight: 700; line-height: 1.55; text-align: center; }
+.comic-footer { padding: 1.25rem 2rem; border-top: 1px solid #dfc9a7; background: #f5ead7; }
 .post-list { margin-top: 1rem; }
 .post-row { margin-bottom: 1rem; padding: 1.4rem; border-radius: .7rem; background: var(--surface); box-shadow: var(--shadow); }
 .post-row .post-date { margin: 0 0 .35rem; color: var(--muted); font-size: .8rem; }
@@ -137,5 +148,11 @@ button, input { font: inherit; }
   .page-header, .article-header { padding: 1.35rem; }
   .article-content { padding: 0 1.35rem 1.5rem; }
   .article-footer { padding: 1rem 1.35rem; }
+  .comic-article { margin-top: .8rem; border-radius: .7rem; }
+  .comic-header { padding: 1.75rem 1rem 1.3rem; }
+  .comic-panels { padding: 1rem; }
+  .comic-panel { margin-bottom: 1.15rem; }
+  .comic-panel figcaption { padding: .85rem 1rem 1rem; }
+  .comic-footer { padding: 1rem; }
   .footer-inner { flex-direction: column; gap: .25rem; }
 }

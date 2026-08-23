@@ -1,0 +1,28 @@
+{{ define "main" }}
+<article class="comic-article">
+  <header class="comic-header">
+    <p class="comic-kicker">A tiny dream comic</p>
+    <h1>{{ .Title }}</h1>
+    <p class="comic-dek">{{ .Description }}</p>
+  </header>
+
+  <section class="comic-panels" aria-label="Dream Cleanup Mission comic">
+    <figure class="comic-panel">
+      <img src="{{ "/posts/2026/08/dream-cleanup-mission-panel-one.png" | relURL }}" alt="A girl discovers many potato-sized cartoon poop lumps all over her bed." fetchpriority="high">
+      <figcaption>“Wait… why is there so much poop all over the bed?!”</figcaption>
+    </figure>
+    <figure class="comic-panel">
+      <img src="{{ "/posts/2026/08/dream-cleanup-mission-panel-two.png" | relURL }}" alt="A dog approaches the lumps on the bed while the girl reaches out to stop it." loading="lazy">
+      <figcaption>“Don’t eat it! Why is that one cracked open and leaking?!”</figcaption>
+    </figure>
+    <figure class="comic-panel">
+      <img src="{{ "/posts/2026/08/dream-cleanup-mission-panel-three.png" | relURL }}" alt="The girl drags a heavy bag full of the lumps while her dog watches from the doorway." loading="lazy">
+      <figcaption>“Finally done… but how could they be so heavy once they were out?!”</figcaption>
+    </figure>
+  </section>
+
+  <footer class="comic-footer">
+    <a class="text-link" href="{{ .Site.Home.RelPermalink }}">← Back to the journal</a>
+  </footer>
+</article>
+{{ end }}
