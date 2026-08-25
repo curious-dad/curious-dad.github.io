@@ -93,6 +93,12 @@ button, input { font: inherit; }
 .subscribe-card p { margin: -.25rem 0 .8rem; }
 .subscribe-button { display: block; border-radius: .5rem; padding: .65rem .85rem; background: var(--surface-soft); color: var(--ink); font-size: .8rem; font-weight: 750; text-align: center; text-decoration: none; }
 .subscribe-button:hover { background: var(--accent-soft); color: var(--accent); }
+.projects-card { display: grid; gap: .65rem; }
+.projects-card .sidebar-title { margin-bottom: 0; }
+.project-link { display: grid; gap: .12rem; padding: .7rem .75rem; border: 1px solid var(--line); border-radius: .5rem; background: var(--surface); color: var(--ink); line-height: 1.35; text-decoration: none; }
+.project-link:hover, .project-link:focus-visible { border-color: var(--accent); color: var(--accent); }
+.project-link strong { font-size: .86rem; }
+.project-link span { color: var(--muted); font-size: .78rem; }
 
 .page-header, .article, .post-list { max-width: 850px; margin-inline: auto; }
 .page-header, .article { margin-top: 1.15rem; border: 1px solid rgba(15,23,42,.04); border-radius: .75rem; background: var(--surface); box-shadow: var(--shadow); }
@@ -139,7 +145,7 @@ button, input { font: inherit; }
   .site-nav a { padding: .75rem; }
   .home-layout { display: block; }
   .sidebar { position: static; }
-  .sidebar-card:not(.intro-card) { display: none; }
+  .sidebar-card:not(.intro-card, .projects-card) { display: none; }
   .intro-card { margin-top: 1.4rem; }
   .post-cover { height: 12rem; }
   .post-card-body { padding: 1.25rem; }
