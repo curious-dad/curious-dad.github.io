@@ -100,6 +100,11 @@ button, input { font: inherit; }
 .project-link strong { font-size: .86rem; }
 .project-link span { color: var(--muted); font-size: .78rem; }
 
+.visit-card { display: grid; gap: .3rem; }
+.visit-card .sidebar-title { margin-bottom: 0; }
+.visit-count { margin: 0; color: var(--ink); font-size: 1.05rem; font-weight: 750; }
+.visit-count span { color: var(--accent); font-size: 1.4rem; }
+
 .page-header, .article, .post-list { max-width: 850px; margin-inline: auto; }
 .page-header, .article { margin-top: 1.15rem; border: 1px solid rgba(15,23,42,.04); border-radius: .75rem; background: var(--surface); box-shadow: var(--shadow); }
 .page-header { padding: 2rem; }
@@ -145,7 +150,7 @@ button, input { font: inherit; }
   .site-nav a { padding: .75rem; }
   .home-layout { display: block; }
   .sidebar { position: static; }
-  .sidebar-card:not(.intro-card, .projects-card) { display: none; }
+  .sidebar-card:not(.intro-card, .projects-card, .visit-card) { display: none; }
   .intro-card { margin-top: 1.4rem; }
   .post-cover { height: 12rem; }
   .post-card-body { padding: 1.25rem; }
