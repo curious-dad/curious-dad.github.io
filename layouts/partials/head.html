@@ -4,6 +4,7 @@
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
 <link rel="canonical" href="{{ .Permalink }}">
 {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">{{ end }}
+{{ partial "google_analytics.html" . }}
 <script>
   (function () {
     var saved = localStorage.getItem('curious-dad-theme');

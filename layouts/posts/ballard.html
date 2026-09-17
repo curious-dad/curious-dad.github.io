@@ -13,6 +13,7 @@
 <meta content="article" property="og:type"/>
 <link href="assets/style.css" rel="stylesheet"/>
 <link href="{{ "article-nav.css" | relURL }}" rel="stylesheet"/>
+{{ partial "google_analytics.html" . }}
 </head>
 <body>
 {{ partial "article-nav.html" (dict "context" . "languageURL" "index-zh.html" "languageLabel" "中文") }}

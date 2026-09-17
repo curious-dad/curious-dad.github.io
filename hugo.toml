@@ -6,6 +6,10 @@ title = 'Curious Dad'
   description = 'Stories about history, nature, our restless planet, and the technology that helps us understand it.'
   author = 'Curious Dad'
 
+[services]
+  [services.googleAnalytics]
+    id = 'G-FYSN6T8TBN'
+
 [permalinks]
   posts = '/posts/:year/:month/:slug/'
 
