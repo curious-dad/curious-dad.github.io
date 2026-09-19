@@ -218,3 +218,11 @@ three-line `More` block, update the same post, and retest.
 - Report the public post URL, desktop/mobile checks, homepage excerpt check,
   image count, and link results.
 - Tell the user to revoke the temporary application password.
+
+## Reusable publisher
+
+For this site, use `scripts/publish-wordpress.mjs` rather than rebuilding the authentication or XML-RPC client. It retrieves the `wordpress` application password from the configured Azure Key Vault through the runtime managed identity; it never logs or writes that secret.
+
+Pass a temporary JSON input file containing `title`, `slug`, `source`, `hero`, `prefix`, `topic`, `label`, `summary`, and `tags`. Include `postId` to update an existing post instead of creating a duplicate. The source must have a `<main>` element. The script uploads the hero, inline data-URI images, and `images/...` body images, replaces their URLs, creates the required three-line More-marker opening, and performs `wp.getUsersBlogs` before a write.
+
+Before running it, inventory public posts by title and slug. Require explicit authorization for the actual publish/update. After it succeeds, still carry out the public desktop/mobile, homepage, and link verification described above; the script's XML-RPC readback is only a transport check.
