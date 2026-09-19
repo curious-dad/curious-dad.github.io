@@ -2,6 +2,23 @@
 
 These instructions apply to the entire repository.
 
+
+## WordPress access (application password)
+
+- The WordPress.com site is `https://gzcuriousdad.wordpress.com/`.
+- Use the username `gzproger@msn.com` and retrieve the application password at
+  runtime from Azure Key Vault `https://jzkvxixixi.vault.azure.net`, secret name
+  `wordpress`. Never put the app password in this repository, logs, commits, or
+  chat output.
+- This is an **application password**, not an interactive browser-login password.
+  Do not validate it through `/wp-login.php`.
+- The site's standard `/wp-json/wp/v2/...` REST endpoint is not exposed. For a
+  read-only credential check, use XML-RPC `wp.getUsersBlogs` against
+  `https://gzcuriousdad.wordpress.com/xmlrpc.php`; a successful response has no
+  XML-RPC fault and includes blog metadata. Do not make publishing or other
+  mutations unless the task explicitly authorizes them.
+- Use the repository's `wordpress-publish-audit` skill for publishing and
+  WordPress-specific verification workflows.
 ## Repository-internal skills
 
 - Codex skills for this repository live under `internal/codex-skills/`.
