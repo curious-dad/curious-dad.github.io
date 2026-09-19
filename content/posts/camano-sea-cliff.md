@@ -1,6 +1,6 @@
 ---
 title: "When a Sea Cliff Opens a Page of Time: Camano Island"
-date: 2026-09-19T10:30:00-07:00
+date: 2026-09-18T19:00:00-07:00
 description: "A walk beneath an eroding sea cliff at Camano Island State Park reveals glacial sediment, cross-bedding, exposed roots, and one summer's insect burrows."
 tags: ["nature", "geology", "Washington", "Pacific Northwest"]
 externalURL: "/camano-sea-cliff/"
